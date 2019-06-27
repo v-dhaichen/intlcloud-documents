@@ -10,13 +10,14 @@
 
 ### 2. 在界面中找到 iOS 版本的 SDK 资源。
 
-### 3.单击【下载】按钮。
+### 3.单击【下载】。
 
-下载完的SDK资源解压后有以下部分：
+下载完的 SDK 资源解压后有以下部分：
 
 |名称     | 意义   
 | ------------- |:-------------:|
-|GMESDK.framework			|游戏多媒体引擎相关资源
+|GMESDK.framework			|原生 iOS 开发相关资源|
+|libGMESDK.a			|Unity iOS 开发相关资源|
 
 ## 系统要求
 
@@ -49,7 +50,7 @@ Bitcode 需要工程依赖的所有类库同时支持，SDK 暂时还不支持 B
 
 |key     | 意义   
 | ------------- |:-------------:|
-|Required background modes    		 |允许后台运行|
+|Required background modes    		 |允许后台运行（可选）|
 |Microphone Usaeg Description   	|允许麦克风权限|
 
 ### 5.离线语音添加 HTTP 访问权限

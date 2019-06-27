@@ -1,13 +1,9 @@
-## Browsing Bucket List
+## Viewing Buckets
 
-When you need to browse your own Buckets, log in to the console, click **Bucket List** on the left menu bar to enter the Bucket list page, where you can see all Bucket information.
+To view your buckets, click **Bucket List** from the left side bar in the [COS Console](https://intl.cloud.tencent.com/login). To see more information about a bucket, you can directly click the bucket name to enter the detail page.
+![](https://main.qcloudimg.com/raw/0e60e4f90c5479049b9bd84ea2a56d62.png)
 
-![](https://mc.qcloudimg.com/static/img/aa1080222ace05e86e7070d7d7219f3d/image.png)
+## Query a Bucket
 
-## Querying Bucket
-
-When you have many Buckets, you can query the Bucket name on the right side of the Bucket list page on the console. Prefix matching queries are supported.
-
-![](https://mc.qcloudimg.com/static/img/c361668cc3a8aed35df12c83571c0f78/image.png)
-
-
+In the console, you can find a specific bucket among a large number of buckets by entering the bucket name in the search box on the right side of the Bucket List page in the console (Search by prefix is supported).
+![](https://main.qcloudimg.com/raw/48c2db81b37125094d15d221a3cb56c8.png)

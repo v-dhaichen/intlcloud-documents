@@ -1,0 +1,23 @@
+{
+  "产品相关接口": {
+    "en": "Product-related APIs"
+  }, 
+  "任务相关接口": {
+    "en": "Task-related APIs"
+  }, 
+  "其他接口": {
+    "en": "Other APIs"
+  }, 
+  "消息相关接口": {
+    "en": "Message-related APIs"
+  }, 
+  "规则引擎相关接口": {
+    "en": "Rule Engine-related APIs"
+  }, 
+  "设备影子相关接口": {
+    "en": "Device Shadow-related APIs"
+  }, 
+  "设备相关接口": {
+    "en": "Device-related APIs"
+  }
+}

@@ -1,18 +1,25 @@
-All the resources in COS are stored in the form of independent objects. For the convenience of users, objects can be managed in the form of Folder.
+## Overview
 
-Enter the COS console, select **Bucket List** function page on the left, enter the Bucket in which a Folder needs to be created, and click **Create Folder**:
+In COS that comes with no folders, objects are stored in a flat structure. To make it easier for you to get started, objects named by using "/" as suffix in the object key can be used as "folders". In fact, the storage space of a "folder" in COS is 0.
+>**Note:**
+The folder name is limited to 255 characters, and the reserved characters and fields are not supported as follows:
+ - Reserved characters: [con], [aux], [nul], [prn], [com0], [com1], [com2], [com3], [com4], [com5], [com6], [com7], [com8], [com9], [lpt0], [lpt1], [lpt2], [lpt3], [lpt4], [lpt5], [lpt6], [lpt7], [lpt8], and [lpt9].
+ - Reserved ASCII control characters:
+Up (↑): CAN (24)
+Down (↓): EM (25) 
+Right (→): SUB (26) 
+Left (←): ESC (27) 
 
-![](https://mc.qcloudimg.com/static/img/8367c053c6138e6a68d189c5c5483064/image.png)
-
-Enter the Folder name, which should be within 20 characters, and note that reserved symbols and reserved fields are not supported:
-
-![](https://mc.qcloudimg.com/static/img/5e0fa9d34b6f11d0e3e0d21339c99e18/image.png)
-
-Click **OK** to finish the creation of the Folder.
-
-## Reserved Words in the Folder Name
-
-**Reserved symbols:** reserved symbols (English half-width symbols) can not be used, such as /,?, *, :, |, \, < , > and ".
-
-**Reserved fields:** reserved fields can not be used directly, but can be included. For example, names including con, aux, nul, prn, com0, com1, com2, com4, com5, com6, com7, com8, com9, lpt0, lpt1, lpt2, lpt3, lpt4, lpt5, lpt6, lpt7, lpt8 and lpt9 can not be used, but names such as con1 or aux1 can be used.
+## Steps
+1. Log in to the [COS console](https://intl.cloud.tencent.com/login), and select **Bucket List** from the left side bar to enter the Bucket List page. Click the bucket you want to create folder and enter the bucket.
+![](https://main.qcloudimg.com/raw/8675c78498b1d65599a95945174bc567.png)
+2. Click **Create folder** and the **Create new folder** dialog box pops up.
+![](https://main.qcloudimg.com/raw/0d7592f9fa0dba6e59d408d09cf44303.png)
+3. Enter the folder name and click **OK** to save it.Naming Rules for Folders are as follows:
+ - A combination of numbers, letters and visible characters is supported.
+ - A folder cannot begin with `/` and does not allow two or more consecutive `/`.
+ - A subdirectory can be created quickly by separating the path by `/`.
+ - The folder name cannot be empty.
+ - Do not use `..` as the folder name.
+![](https://main.qcloudimg.com/raw/867050320892e102b928a8ac925794f2.png)
 

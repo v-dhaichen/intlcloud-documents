@@ -42,14 +42,27 @@ sourceSets {
 
 在工程 AndroidManifest.xml 文件中添加以下权限：
 
+
 ```
   <uses-permission android:name="android.permission.RECORD_AUDIO" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
   <uses-permission android:name="android.permission.BLUETOOTH"/>
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-	```
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/ >
+```
+
+如果使用离线语音，请在清单文件application节点下添加：
+```
+  <application android:usesCleartextTraffic="true" >
+```
+
+### App 混淆相关
+如果需要对代码进行混淆，需进行以下配置：
+```
+-dontwarn com.tencent.**
+-keep class com.tencent.** { *;}
+-keepclassmembers class com.tencent.**{*;}
+```
+

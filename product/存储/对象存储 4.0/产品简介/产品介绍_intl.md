@@ -1,32 +1,51 @@
 ## Introduction to COS
 
-Tencent Cloud COS (Cloud Object Storage) is a distributed storage service that can be used to store and retrieve any amount of data, at any time, from anywhere on the Web. It allows all developers to access a scalable, reliable and secure data storage at low cost.
+Cloud Object Storage (COS) is a distributed storage service in Tencent Cloud to save massive numbers of files. Users can store and view data via network at any time. Tencent Cloud COS provides scalable, inexpensive, reliable and secure data storage services for all users.
 
-The COS solves the resource overconsumption problem of traditional file system in accessing directories, and supports mass data storage as well as simple and rapid access to such data via API, SDK or other methods. You can use it to upload, download and manage any type of files. In addition, Tencent Cloud provides an intuitive Web management interface. You can speed up downloads through the nationwide CDN nodes.
+You can easily and quickly access COS via console, API or SDK to store and manage massive data. You can leverage COS’s user-friendly web management interface to upload, download and manage files in different formats. CDN nodes across the country also boost your file download speed.
+## Types of Storage
 
-This product documentation describes some core concepts of Tencent Cloud COS (such as bucket, object) and how to use such resources. You can learn how to create buckets, store and retrieve objects, and manage resource access permissions from this document.
+COS provides three types of object storage catering to different access frequencies: COS Standard, COS Infrequent Access, and Archive Storage.
 
-## COS Vs. Traditional File System
+>Default is COS Standard.
 
-COS is a distributed cloud object storage service, while file system is a typical tree index structure.
+### COS Standard
 
-File system supports all operations on the directory file. However, as such operations are performed on tree index, the file system consumes larger resources when accessing deeper directories. Due to limitation on the performance of a single device, file system is only available for performing a small amount of data operations. On the contrary, as COS stores both file data and metadata, and is not built as a tree index like file system, it is capable of performing massive user concurrent access and mass data storage.
+COS Standard is a reliable, accessible and powerful object storage service.
+
+Its low latency and high throughout make it well suited for use cases involving lots of hotspot files or frequent data access.
+
+**Use Cases:** Hotspot videos, social images, mobile Apps, game programs, and dynamic websites.
+
+### COS Infrequent Access
+
+COS Infrequent Access is a reliable object storage service with low storage cost and low access latency.
+
+You can cut your storage cost while still accessing the first byte in the milliseconds. You can pay and retrieve data without waiting and you can also quickly read data. It is well suited for use cases with low access frequency.
+
+**Application scenarios:** Network disk data, big data analysis, government and enterprise business data, infrequent access archive, and monitoring data.
+
+### Archive Storage
+
+Archive Storage is a highly reliable object storage service that has ultra-low storage cost and long-term data retention.
+
+Featuring the lowest storage price, Archive Storage needs a relatively long time to read data and is suited for archived data that needs to be stored for a long time.
+
+**Use Cases:** Archive data, medical images, scientific data, and film and video materials.
+
+### Comparison
+
+| | COS Standard | COS Infrequent Access | Archive Storage |
+| ------------ | -------- | -------- | ------------------- |
+| Response | In milliseconds | In milliseconds | Request for recovery in advance |
+| Minimum billing period | - | 30 days | 90 days |
+| Supported regions | All regions | All regions | Mainland China Only |
+| Storage fee | Standard | Low | Ultra-low |
+| Data retrieval fee | - | Low | High |
+| Read/Write request fee | Ultra-low | Low | Ultra-low (can only be read/write after recovery) |
 
 
-The following figure illustrates the service architecture of COS:
-
-![](https://mccdn.qcloud.com/static/img/054a0694e4d52fb1a470debcf57452eb/image.png)
-
-For more information on Tencent Cloud COS, refer to:
-[Terms and Concepts of COS](https://cloud.tencent.com/document/product/436/6225)
-[How to Use Buckets](https://cloud.tencent.com/document/product/436/6232)
-[How to Use Objects](https://cloud.tencent.com/document/product/436/6233)
-
-## Standard Storage
-
-High-frequency Storage provides users with Cloud Object Storage with high reliability, high availability and high performance. High-frequency Storage has low access latency and high throughput, which means it is suitable for business scenarios with large amount of hot files and data that is accessed frequently, for example, hot videos, mobile applications, game programs and dynamic websites.
-
-## Low-frequency Storage
-
-Low-frequency Storage provides users with Cloud Object Storage with high reliability, relatively low storage cost and access latency. Low-frequency Storage is suitable for business scenarios with low access frequency, for example, online disks and low-frequency files. Low-frequency Storage has lower storage cost, while maintaining a Time to First Byte within milliseconds. Users can read data with fast speed when retrieving data, without the need to wait.
-
+For more information on Tencent Cloud COS, see the following documents:
+[Regions & Endpoints](https://intl.cloud.tencent.com/document/product/436/6224)
+[Features](https://intl.cloud.tencent.com/document/product/436/8186)
+[Specifications and Limits](https://intl.cloud.tencent.com/document/product/436/14518)

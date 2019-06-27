@@ -1,37 +1,20 @@
-Object access permission allows access control at Object dimension and has a higher priority than Bucket permission.
+## Overview
+COS allows you to set access permission for objects, and this permission has a higher priority than that for buckets.
+The object access permission is valid only when the access attempt is made via the default domain name. For any access attempt made via a CDN accelerated domain name or custom domain name, the bucket access permission has the first priority.
 
-By modifying the Object access permission, you can, for example, set the Objects which allow public access in a private Bucket, or the Objects that only allow access after authentication in a public Bucket. There are the following Object permission types:
+### Scenarios
+You can set the specified object which allow public access in a private read/write bucket, or the specified objects which only allow access after authentication in a public read/write bucket.
+### Type of access
+- Inherit Permission: Bucket permission inherited by an object is consistent with bucket access permission. When accessing an object with an access permission of "Inherit Bucket Access Permission", COS matches the bucket access permission to respond to the access. A new object inherits access permission from its bucket by default.
+- Public Read/Private Write: When an object with an access permission of "Public Read" is accessed, the object can be directly downloaded, regardless of the bucket access permission.
+- Private Read/Write : When an object with an access permission of "Private Read/Write" is accessed, the object can only be accessed after [Request signature](https://intl.cloud.tencent.com/document/product/436/7778), regardless of the bucket access permission.
+- Public Read/Write: Anyone (including anonymous visitors) has read and write permissions to the objects in the bucket. This is not recommended.
 
-- Default: Any new Object has no any permission attribute when created. For an access request, Object will be skipped and Bucket permission will be directly matched.
-
-- Public read and private write: When receiving an access request, COS will learn that the Object allows public read access. In this case, the Object can be download directly regardless of the Bucket permission.
-
-- Private read and write: When receiving an access request, COS will learn that the Object allows private read/write access. In this case, no matter what the Bucket permission is, the Object can only be accessed by going through [Signature Authentication](/doc/api/435/6054).
-
-- Inherit Bucket permission: The Object permission returns to being same as Bucket permission after being modified. When receiving an access request, COS will learn that the Object permission is inherited from Bucket permission, and then match the Bucket permission to respond to the access request.
-
-> The configured Object permission is valid only if the access is made directly using the domain (public network access, private network access). For the access attempt using CDN accelerated domain (e.g. file.myqcloud.com, or a custom domain bound to CDN), the authentication must be subject to the Bucket permission.
-
-Assuming that you have created a Bucket named test with the **public read and private write** permission under the APPID of 1250000000, and uploaded Object a.txt to the root directory of the Bucket: You can download the Object successfully by accessing `http://test-1250000000.cos.myqcloud.com/a.txt`.
-
-## 1. Private Read and Write
-
-Set the permission of Object a.txt to private read and write, and make an access attempt.
-
-Upon the access to `http://test-1250000000.cos.myqcloud.com/a.txt`, the error code "403 Forbidden" will be returned with the message {"errorcode":-45086,"errormsg":"sign check fail"} indicating the signature authentication failed. The access to `http://test-1250000000.cos.myqcloud.com/a.txt?sign=[Signature String]` can be achieved successfully after the [Signature](/doc/api/435/6054) is completed.
-
-## 2. Public Read and Private Write
-
-Set the permission of Object a.txt to public read and private write, and make an access attempt.
-
-You can download it successfully by accessing `http://test-1250000000.cos.myqcloud.com/a.txt`. Modify the Bucket attribute to set its permission to **private read and write**, and make an access attempt to `http://test-1250000000.cos.myqcloud.com/a.txt`. In this case, the download still can be performed normally.
-
-## 3. Overwriting Bucket Permission
-
-Change the Bucket permission to **private read and write**, set the Object permission to "private read and write", and make an access attempt.
-
-Upon the access to `http://test-1250000000.cos.myqcloud.com/a.txt`, error code "403 Forbidden" will be returned with the message {"errorcode":-45086,"errormsg":"sign check fail"} indicating the signature authentication failed. The access to `http://test-1250000000.cos.myqcloud.com/a.txt?sign=[Signature String]` can be achieved successfully after the signature is completed.
-
-At this point, change the Bucket permission to **public read and private write** and make an access attempt to `http://test-1250000000.cos.myqcloud.com/a.txt`. Error code "403 Forbidden" will be returned with the message {"errorcode":-45086,"errormsg":"sign check fail"} indicating the signature authentication failed. The access to `http://test-1250000000.cos.myqcloud.com/a.txt?sign=[Signature String]` can be achieved successfully after the signature is completed.
-
+## Procedure
+1. Log in to the [COS Console](https://intl.cloud.tencent.com/login), and then select the left pane **Bucket List** to go to the Bucket List page. Click the bucket of the object for which you want to modify access permission to enter the bucket.
+![](https://main.qcloudimg.com/raw/e4f21abdfd08af484c1f4091b0d497e2.png)
+2. Locate the object for which you want to set permission (such as example.exe), then click **Details** on the right of the object, and you can set permission on its details page. In case of a folder, directly set the permission by clicking **Set Permission** on the right.
+![](https://main.qcloudimg.com/raw/dc2da2c85615da9433e141826221ff52.png)
+3. Modify the permission, and then click **Save**.
+![](https://main.qcloudimg.com/raw/09b25c4e5ebf683415971e79d558dc02.png)
 

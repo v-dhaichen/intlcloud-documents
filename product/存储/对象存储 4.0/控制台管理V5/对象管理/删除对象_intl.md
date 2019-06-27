@@ -1,9 +1,23 @@
-You can delete the Object that has been uploaded to the Bucket on the page.
+## Overview
+You can delete a single object or multiple objects uploaded to a bucket via the COS Console.
 
-Enter the COS console, go to the Bucket of the file to be deleted, and click **Delete** in the operation column on the right side of the Object.
+## Deleting a Single Object
 
-![](https://mc.qcloudimg.com/static/img/1a51dc82dbb30c6aec1b79af9a30ce71/image.png)
+### Procedure
 
-Click **Yes** to delete the Object. The original URL of the Object becomes invalid immediately after the deletion. The feature of batch deletion is currently not supported for the Bucket console. The batch deletion tool is available in the developer tools in the product documentation.
+1. Log in to the COS Console, enter the appropriate bucket, then select the object to be deleted, and click **Delete**. The **Delete File** dialog box pops up.
+![](https://main.qcloudimg.com/raw/265a167d02096836e832562507e80a04.png)
 
+2. Click **OK** to delete the object.
+![](https://main.qcloudimg.com/raw/58403221c8450da76fa428a42dc0ca2a.png)
+
+## Deleting Multiple Objects
+
+### Procedure
+
+1. Select the objects to be deleted in the COS Console, and click **Delete in Batch**. The **Delete File** dialog box pops up.
+![](https://main.qcloudimg.com/raw/c94800ef4c8bb3298148e2ffff5d9adc.png)
+
+2. Click **OK** to delete the objects in batch.
+![](https://main.qcloudimg.com/raw/6d6335a56b1957e67fdf053e5de1d82a.png)
 

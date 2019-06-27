@@ -1,38 +1,68 @@
-When there is no user request file in a Bucket, or when a specific request needs to be redirected, setting the back-to-origin can effectively meet users' needs. Back-to-origin setting is mainly used for scenarios such as hot migration of data, and redirection of specific requests.
+## Overview
 
-Currently, the back-to-origin setting supports IP segments of which the origin server IP belongs to China Telecom, China Mobile, China Unicom and Great Wall Broadband. The supported ISPs are increasing.
+Origin-pull settings are mainly used for live data migration and specific request redirection. For instance, if there is no user-requested object in the bucket or redirection is needed for special requests, setting origin-pull address can satisfy users’ demands.
 
-![](//mccdn.qcloud.com/img5697c84160bd9.png)
+As of July 2017, origin-pull setting supports IP from China Telecom, China Mobile, China Unicom and Great Wall Broadband Network. Supports for other carriers are coming soon.
+![origin-pull Setting 1](//mc.qcloudimg.com/static/img/c6e4e6281c47210b8dd97ba3a2a7cb9f/image.png)
 
-## Configuration Instructions
+## Setting up Origin-pull
 
-Enter the COS console, and click the Bucket List on the left to enter the Bucket List page. Select the Bucket for which the origin needs to be configured. Click to enter the File List, and then switch to the tab **Basic Configuration**:
+1. Log in to the [COS Console](https://intl.cloud.tencent.com/login), and select **Bucket List** from the left side bar to access the Bucket List page. Click the bucket (such as example) where you want to configure the origin-pull and access the bucket.
+   ![](//mc.qcloudimg.com/static/img/b51d5a77d53c3416324ea3eb283c788c/image.png)
+2. Click **Basic Configuration** to go to the Basic Configuration page of the bucket, locate the origin-pull settings, and then click **Edit** to go into the editing mode.
+   ![](//mc.qcloudimg.com/static/img/5cd4e9d94d871eb4b58714c0d993fe52/image.png)
+3. Change the status to **Enabled**, enter the origin server address (such as abc.example.com), and then click **Save**.
+   ![](//mc.qcloudimg.com/static/img/31950daad98cbfc7dbbbedf4673ac221/image.png)
 
-![](https://mc.qcloudimg.com/static/img/dbddd755f6b782d8f9857d6e0feb9806/image.png)
+> **Notes:**
 
-Click the **Edit** button next to the **Origin Configuration**:
-
-![](https://mc.qcloudimg.com/static/img/b8717b14f1e94c920679655df98cc693/image.png)
-
-Status: After the back-to-origin is enabled, the domain or IP address that needs to send requests to the origin must be filled in.
-
-Note: Currently, only HTTP is supported, and HTTPS is not supported. Fill in the domain or IP address without the prefix "http://". The port number can be added to the address in the :[port] format, and : should be an English character.
-
-Configure a valid address for back-to-origin requests, for example:
+- **After enabling origin-pull, be sure to enter the origin server's domain name or IP address, otherwise the settings cannot be saved.**
+- **In "Origin Server Address", only enter the domain name without "http://" or IP address. You can also add the port number in the format of ":[port]".**
 
 ```
-abc.qq.com
-abc.qq.com:8080
-123.2.4.8
-123.2.4.8:8080
+For example (the following example is for reference only):
+abc.example.com
+abc.example.com:8080
+10.10.10.10
+10.10.10.10:8080
 ```
+
+- **As of July 2017, the console only supports origin-pull over HTTP. Origin-pull over HTTPS is not supported.**
 
 ## Example
-A user creates a new Bucket and enables the CDN accelerated access domain `Bucket-1250000000.file.myqcloud.com`. The user sets the address for back-to-origin requests of the Bucket to `abc.qq.com`, and stores an image `http://abc.qq.com/1.jpg` on the origin server.
 
-When accessing `http://bucket-1250000000.file.myqcloud.com/1.jpg` for the first time, COS finds that the file was not hit, and returns 302 HTTP status code to the client and jumps to `http://abc.qq.com/1.jpg`. In this case, the file is provided by the origin server for the client to ensure successful access, and meanwhile, COS will copy the `1.jpg` at the origin server and save it to the root directory of the bucket.
+**Background**
+A user with APPID of 1250000000 created a bucket named "example", and enabled the CDN accelerated domain name:
 
-When accessing `http://bucket-1250000000.file.myqcloud.com/1.jpg` for the second time, the `1.jpg` under the root directory in the COS will be hit directly.
+```
+example-1250000000.file.myqcloud.com```
+Set the origin server address for the bucket to:
+```
 
+abc.example.com
 
+```
+Store the image 1.jpg at the origin server (`http://abc.example.com`).
 
+**The first access from the client:**
+```
+
+http://example-1250000000.file.myqcloud.com/1.jpg
+
+```
+When COS finds that the object cannot be hit, it returns the HTTP status code 302 to the client and is redirected to 
+```
+
+http://abc.example.com/1.jpg
+
+```
+Then the origin server provides the object to the client to ensure the access, and COS copies 1.jpg from the origin server and saves it to the root directory of the bucket "example".
+
+**The second access**
+```
+
+http://example-1250000000.file.myqcloud.com/1.jpg
+
+```
+COS directly hits the object 1.jpg in the root directory and returns it to the client.
+```

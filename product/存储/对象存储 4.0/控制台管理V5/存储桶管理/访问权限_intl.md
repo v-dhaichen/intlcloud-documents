@@ -1,17 +1,15 @@
-Tencent Cloud Bucket provides two types of access permission by default: public read permission and private write permission, and private read/write permissions.
+## Overview
 
-- Public read permission and private write permission: Anyone (including anonymous visitors) has read permission to the files in the Bucket, but only the Bucket creator and accounts with the appropriate permission have write permission to the files in the Bucket. Accounts with appropriate permission should exercise [Authentication](/doc/api/264/5993) for write operations.
-- Private read/write permissions: Only the creator of the Bucket and accounts with the appropriate permissions have read and write permissions to the files in the Bucket, and no one else has read and write permissions to the files in the Bucket. Accounts with appropriate permission should exercise [Authentication](/doc/api/264/5993) for read and write operations.
+Users can modify bucket access permissions in the console or via APIs. The COS Console by default supports two types of access permissions: Public Read/Private Write, and Private Read/Write.
 
-Users can modify Bucket access permission through the console and API
+- Public Read/Private Write: anyone, including anonymous visitors has read permission to objects in the bucket. However, only the bucket creator and authorized accounts have write permission to objects in the bucket.
+- Private Read/Write: only the bucket creator and authorized accounts have read and write permissions to bucket files.
 
-Users can set the access permission of Bucket when creating the Bucket, and modify the permission at any time Enter the COS console, and click the bucket of which you need to modify the permission. Enter the Bucket, and click **Basic Configuration**:
+## Setting Up Access Permissions
 
-![](https://mc.qcloudimg.com/static/img/e2532927eb0ba207eb7838fe76e39797/image.png)
+Users can select the access permission to a bucket when [creating a bucket](https://intl.cloud.tencent.com/document/product/436/6232). Users can also modify the access permission to a bucket in Basic Configuration by following the steps below:
 
-Find **Access Permission**, and click **Edit** button to modify the Bucket access permission:
-
-![](https://mc.qcloudimg.com/static/img/2c6e7ac571068ac9a332a1eaac81ccad/image.png)
-
-
-
+1. Log in to the [COS console], click **Bucket List** from the left side bar, click the bucket (such as example) you want to modify access permission for, and enter the bucket detail page.
+   ![](https://main.qcloudimg.com/raw/695c2f7e68ef417a9f1a0809fcd804fc.png)
+2. Modify the access permission (for example, changing the bucket access permission from Public Read/Private Write to Private Read/Write), and click **Save** to complete the modification.
+   ![](https://main.qcloudimg.com/raw/6fb49a9d5a81e91fd06a56fe69ca7cff.png)
