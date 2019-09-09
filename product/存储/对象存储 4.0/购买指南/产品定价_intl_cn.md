@@ -356,7 +356,7 @@
 
 <table>
    <tr>
-	 <th rowspan=2 ><center>地域</center></th>
+	<th rowspan=2 ><center>适用地域</center></th>
       <th colspan=2 ><center>管理费用</center></th>
    </tr>
    <tr>
