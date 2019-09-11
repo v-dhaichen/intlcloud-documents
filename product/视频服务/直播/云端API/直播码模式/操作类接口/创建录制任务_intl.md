@@ -4,7 +4,7 @@
 - **URL**
 URL for calling API: `http://fcgi.video.qcloud.com/common_access`
 - **Note**
-Recorded files are stored on the VOD platform. If you want to use the recording feature, you need to activate the VOD service. When recording files are stored, the charges (including charges for storage and downstream playback traffic) are calculated with VOD billing method. For more information, please see [relevant document](https://cloud.tencent.com/doc/product/266/%E4%BB%B7%E6%A0%BC%E6%80%BB%E8%A7%88).
+Recorded files are stored on the VOD platform. If you want to use the recording feature, you need to activate the VOD service. When recording files are stored, the charges (including charges for storage and downstream playback traffic) are calculated with VOD billing method.
 Create a recording task. This API supports two recording modes: Scheduled Recording and Real-time Recording. In Scheduled Recording, importing the start time of a task is needed, which may cause the missing of wonderful moments in a video. In Real-time Recording, recording is synchronous with playback of a video, making it possible to capture all of the marvelous moments in a video. Note: API calling timeout should be greater than 3 seconds, because retries within 3 seconds and frequent calls may lead to duplicate recording tasks.
 
 ### 2. Input Parameters
@@ -13,8 +13,8 @@ Create a recording task. This API supports two recording modes: Scheduled Record
 |---------|---------|---------|---------|---------|
 | APPID                        | Customer ID | int       | LVB APPID used for identifying customers |  Y          | 
 | interface                 | API name | string |  Enter Live_Tape_Start  |  Y          | 
-| t | [Validity period](https://cloud.tencent.com/doc/api/258/5956#.E5.AE.89.E5.85.A8.E6.A3.80.E6.9F.A5) | int  | UNIX timestamp (decimal) |  Y | 
-| sign | [Security signature](https://cloud.tencent.com/doc/api/258/5956#.E5.AE.89.E5.85.A8.E6.A3.80.E6.9F.A5) | string | MD5(key+t) | Y | 
+| t | Validity period | int  | UNIX timestamp (decimal) |  Y | 
+| sign | Security signature | string | MD5(key+t) | Y | 
 | Param.s.channel_id | Channel ID | string | | Y|
 | Param.s.start_time  | Start time of the task | string  | China Standard Time, which needs urlencode, such as: 2017-01-01%2010:10:01 | Y |
 | Param.s.end_time | End time of the task | string   | China Standard Time, which needs urlencode, such as: 2017-01-01%2010:10:01 | Y|

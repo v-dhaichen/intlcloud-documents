@@ -6,9 +6,9 @@ The second half of a bucket name is the APPID. You can check it by logging in to
 
 A temporary key is valid for 2 hours (7,200 seconds) at most. For more information on temporary keys, see [Temporary Key Generation and Usage Guide](https://intl.cloud.tencent.com/document/product/436/14048).
 
-### What should I do if the key information such as APPID and SecretId is leaked?
+<!--### What should I do if the key information such as APPID and SecretId is leaked?
 
-You can delete the leaked key and create a new one. For more information, see [Key Management](https://cloud.tencent.com/document/product/436/10074).
+<!--You can delete the leaked key and create a new one. For more information, see Key Management.-->
 
 ### Does COS support file encryption?
 
@@ -43,7 +43,7 @@ Log in to the [COS Console](https://console.cloud.tencent.com/cos5), and select 
 
 1. Locate **Policy Permission Settings**, and click **Add Policy** under **Graphic Settings**.
 2. Configure the permission as shown below, and click **OK**.
-   ![Polcy图形设置](https://main.qcloudimg.com/raw/c739d31636d117757449c7e0e106ad84.png)
+   ![Polcy图形设置](https://main.qcloudimg.com/raw/ebdf5d50defce8cb17e46b60fc1262c0.png)
 
 #### Method 2:
 
@@ -93,7 +93,7 @@ The total number of ACLs and Policies for COS cannot be greater than 1,000. When
 
 ### How do I create sub-accounts for subsidiaries or employees and grant access to specific buckets for them?
 
-For more information, see [Authorizing Sub-Accounts to Access COS](https://intl.cloud.tencent.com/document/product/436/11714).
+For more information, see Authorizing Sub-Accounts to Access COS.
 
 ### How do I generate a time-bound access link for Private Read/Write files?
 

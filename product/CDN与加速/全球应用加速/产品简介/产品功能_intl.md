@@ -1,6 +1,6 @@
 Key features of the Global Application Acceleration Platform include acceleration proxy configuration, origin server management, acceleration data statistics, connection monitoring, and acquisition of real user IPs.
 ## Acceleration Proxy
-- Acceleration connections can be configured based on the regions of destination users and origin servers. GAAP selects an optimal acceleration connection automatically according to the regions of the destination user and the origin servers. This connection is the shortest and the optimal path between the destination user and the origin server, which delivers a positive experience for real users. For more information, please see [Access Management](/document/product/608/13763).
+- Acceleration connections can be configured based on the regions of destination users and origin servers. GAAP selects an optimal acceleration connection automatically according to the regions of the destination user and the origin servers. This connection is the shortest and the optimal path between the destination user and the origin server, which delivers a positive experience for real users. For more information, please see [Access Management](/document/product/608/13765).
 
 - Forwarding via TCP and UDP is supported.
 - Forwarding of URL rules is supported for HTTP and HTTPS.
@@ -18,5 +18,5 @@ Key features of the Global Application Acceleration Platform include acceleratio
 - Monitor the statuses of connections and origin servers. Trigger alerts in the event of irregularities to keep you abreast of the situation and help you resolve any issue promptly. For more information, please see [here](/document/product/608/17541).
 
 ## Acquisition of Real User IPs
-- Obtain real user IPs via the TOA module. Ensure effective and transparent transmission of IPs to meet your needs of business data analysis. For more information, please see [here](/document/product/608/14427).
+- Obtain real user IPs via the TOA module. Ensure effective and transparent transmission of IPs to meet your needs of business data analysis. For more information, please see [here](https://intl.cloud.tencent.com/document/product/608/18946).
 

@@ -1,9 +1,9 @@
-The COS FTP Server tool can be used to directly operate objects and directories in COS via the FTP protocol, including uploading/downloading/deleting files and creating folders. This tool is developed with Python, which makes the installation easier.
+The COS FTP Server tool can be used to directly manage objects and directories in COS via the FTP protocol, including uploading/downloading/deleting files and creating folders. This tool is developed with Python, which makes the installation easier.
 ## Operating Environment
 ### System Environment
 OS: Linux. It is recommended to use the CVM of Tencent Cloud CentOS 7 series. Windows systems are not supported for now.
 
-Python interpreter version: Python 2.7. For more information on how to install and configure it, please see [Python Installation and Configuration](https://cloud.tencent.com/document/product/436/10866).
+Python interpreter version: Python 2.7. For more information on how to install and configure it, please see [Python Installation and Configuration](https://intl.cloud.tencent.com/document/product/436/10866).
 
 Dependent libraries:
 - requests

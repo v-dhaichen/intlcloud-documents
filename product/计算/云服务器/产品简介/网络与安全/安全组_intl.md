@@ -24,8 +24,6 @@ Each security group rule involves the following items:
   - Reference a security group ID. You can reference one of the following security group IDs:
      - Current security group. (This indicates whether CVMs associated with the security group can be mutually accessed or not)
        - Another security group. Another security group ID of the same project in the same region.
-  - Reference an IP address object or an IP address group object in the [Parameter Template](https://cloud.tencent.com/document/product/215/9882). 
- - Protocol port: Enter the protocol type and port range, or reference an IP address object or an IP address group object in the [Parameter Template](https://cloud.tencent.com/document/product/215/9882).
  - Policy: Allow or Reject.
 
 > **Note:**
@@ -67,5 +65,5 @@ An instance associated with a security group with no rules will reject all traff
 | Operations are only applied to an instance if the security group is specified when the instance is launched or the security group is associated with the instance later | Operations are automatically applied to all CVM instances in the associated subnet |
 
 ## Security Group-related Cloud APIs
-Security group-related cloud APIs are Developer Tools of security groups. Cloud APIs can be used to work with security groups and manage the configurations of security groups and CVM instances. For more information, please see [Security Group-related APIs](/doc/api/229/API%E6%A6%82%E8%A7%88#6.-安全组相关接口).
+Security group-related cloud APIs are Developer Tools of security groups. Cloud APIs can be used to work with security groups and manage the configurations of security groups and CVM instances. 
 

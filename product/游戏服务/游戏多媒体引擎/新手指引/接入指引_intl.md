@@ -22,7 +22,7 @@ Enter the required information on this page and select the service you need.
 
 - The settings for voice messaging and speech-to-text service can be modified at any time.
 
-![](https://main.qcloudimg.com/raw/8bed789287a2b1a0dfe4861fd052d70c.png)
+<!--![](https://main.qcloudimg.com/raw/8bed789287a2b1a0dfe4861fd052d70c.png)-->
 
 
 #### 3. After the application is created successfully, it will be shown in the application management list.
@@ -73,4 +73,4 @@ The demo has a Tencent cloud test account for functionality trial. If you need t
 
 
 ## Troubleshooting Special Problems
-[FAQs](https://intl.cloud.tencent.com/document/product/607/30408)     [Error Codes](https://intl.cloud.tencent.com/document/product/607/15173)
+[FAQs](https://intl.cloud.tencent.com/document/product/607/30254)      [Error Codes](https://intl.cloud.tencent.com/document/product/607/15173)

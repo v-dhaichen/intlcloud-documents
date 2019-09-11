@@ -2,13 +2,15 @@
 
 COSBrowser makes it easy for users to upload and download data in a visualized manner.
 
-## Download and Installation
+## Download and Install
 
 Download setup file (double click to install):
 
 - [COSBrowser Windows OS Client](https://cos5.cloud.tencent.com/cosbrowser/releases/cosbrowser-setup-latest.exe)
 
 - [COSBrowser macOS Client](https://cos5.cloud.tencent.com/cosbrowser/releases/cosbrowser-latest.dmg)
+
+- [COSBrowser Linux Client](https://cos5.cloud.tencent.com/cosbrowser/releases/cosbrowser-latest-linux.zip)
 
 ## Software Interface
 ![cosbrowser](https://main.qcloudimg.com/raw/5669f0805345574ec824fcb4262edefe.png)

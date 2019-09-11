@@ -1,43 +1,43 @@
-﻿## 1. API Description
+## 1. API Description
 
-API request domain name: as.tencentcloudapi.com.
+API domain name: as.tencentcloudapi.com.
 
-This API (DescribeAutoScalingInstances) is used to query information about the instances associated with Auto Scaling.
+This API (DescribeAutoScalingInstances) is used to query information on the instances with AS.
 
-* You can query the details of instances based on information such as instance ID and scaling group ID. For more information about filters, see `Filter`.
-* If the parameter is empty, a certain number of instances (specified by `Limit` and 20 by default) of the current user is returned.
+* You can query the details of instances based on information such as instance ID and auto scaling group ID. For more information on filters, see `Filter`.
+* If the parameter is empty, a number (same as the `Limit`. The default is 20) of instances will be returned.
 
-Default API request frequency limit: 10 times/second.
+Default API request rate limit: 10 requests/sec.
 
-Note: This API supports financial availability zones. As financial availability zones and non-financial availability zones are isolated, if the common parameter Region specifies a financial availability zone (e.g., ap-shanghai-fsi), it is necessary to specify a domain name with the financial availability zone too, preferably in the same region as specified in Region, such as as.ap-shanghai-fsi.tencentcloudapi.com.
+Note: This API supports financial regions. As financial regions and non-financial regions are isolated, if the common parameter `Region` is a financial region such as ap-shanghai-fsi, it is necessary to specify a domain name with a financial region, preferably the same as that specified in `Region`, such as as.ap-shanghai-fsi.tencentcloudapi.com.
 
 
 
 ## 2. Input Parameters
 
-The following list of request parameters lists only the API request parameters and some common parameters. For the complete list of common parameters, see [Common Request Parameters](/document/api/377/20426).
+The list below contains only the API request parameters and certain common parameters. For the complete common parameter list, see [Common Request Parameters](/document/api/377/20426).
 
-| Parameter name | Required | Type | Description |
+| Parameter Name | Required | Type | Description |
 |---------|---------|---------|---------|
-| Action | Yes | String | Common parameter; the value for this API: DescribeAutoScalingInstances |
-| Version | Yes | String | Common parameter; the value for this API: 2018-04-19 |
-| Region | Yes | String | Common parameters; for details, see the [Region List](/document/api/377/20426#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8). |
-| InstanceIds.N | No | Array of String | ID of the CVM instance to be queried. The parameter does not support specifying both InstanceIds and Filters at the same time. |
-| Filters.N | No | Array of [Filter](/document/api/377/20453#Filter) | Filter. <br/><li> instance-id - String - Required: No - (Filter) Filter by instance ID. </li><li> auto-scaling-group-id - String - Required: No - (Filter) Filter by scaling group ID. </li><br/>The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. The parameter does not support specifying both `InstanceIds` and `Filters` at the same time. |
-| Offset | No | Integer | Offset, 0 by default. For more information about `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688). |
-| Limit | No | Integer | Number of returned results, 20 by default, up to 100. For more information about `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688). |
+| Action | Yes | String | Common parameter. The value used for this API: DescribeAutoScalingInstances |
+| Version | Yes | String | Common parameter. The value used for this API: 2018-04-19 |
+| Region | Yes | String | Common parameter. For more information, see the [list of regions](/document/api/377/20426#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) supported by the product. |
+| InstanceIds.N | No | Array of String | ID of the CVM instance to be queried. This parameter does not support specifying both InstanceIds and Filters at the same time. |
+| Filters.N | No | Array of [Filter](/document/api/377/20453#Filter) | Filter. <br/><li> instance-id - String - Required: No - (Filter) Filter by instance ID. </li><li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID. </li><br/>The maximum number of `Filters` per request is 10, while that of `Filter.Values` is 5. This parameter does not support specifying both `InstanceIds` and `Filters` at the same time. |
+| Offset | No | Integer | Offset. Default value: 0. For more information on `Offset`, see relevant section in the API [Overview](https://cloud.tencent.com/document/api/213/15688). |
+| Limit | No | Integer | Number of returned results. It defaults to 20. The maximum is 100. | For more information on `Limit`, see relevant section in the API [Overview](https://cloud.tencent.com/document/api/213/15688). |
 
 ## 3. Output Parameters
 
-| Parameter name | Type | Description |
+| Parameter Name | Type | Description |
 |---------|---------|---------|
-| AutoScalingInstanceSet | Array of [Instance](/document/api/377/20453#Instance) | List of instance details. |
-| TotalCount | Integer | Number of eligible instances. |
-| RequestId | String | The unique request ID which is returned for each request. The RequestId for the current request needs to be provided when troubleshooting |
+| AutoScalingInstanceSet | Array of [Instance](/document/api/377/20453#Instance) | Instance details list |
+| TotalCount | Integer | Number of instances that meet the condition |
+| RequestId | String | Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues. |
 
-## 4. Sample
+## 4. Samples
 
-### Querying a Specified Instance
+### Sample 1. Querying a Specified Instance
 
 #### Input Sample Code
 
@@ -51,25 +51,26 @@ https://as.tencentcloudapi.com/?Action=DescribeAutoScalingInstances
 
 ```
 {
-    "Response": {
-        "TotalCount": 1,
-        "AutoScalingInstanceSet": [
-            {
-                "ProtectedFromScaleIn": false,
-                "Zone": "ap-guangzhou-3",
-                "LaunchConfigurationId": "asc-5fzsm72a",
-                "InstanceId": "ins-1fswxz1m",
-                "AddTime": "2018-08-21T12:05:12Z",
-                "CreationType": "AUTO_CREATION",
-                "AutoScalingGroupId": "asg-4o61gsxi",
-                "HealthStatus": "HEALTHY",
-                "LifeCycleState": "IN_SERVICE",
-                "LaunchConfigurationName": "series 2 local disk",
-                "InstanceType": "S2.SMALL2"
-            }
-        ],
-        "RequestId": "2ae3e836-d47a-431c-b54b-4e1c2f419e5b"
-    }
+  "Response": {
+    "TotalCount": 1,
+    "AutoScalingInstanceSet": [
+      {
+        "ProtectedFromScaleIn": false,
+        "Zone": "ap-guangzhou-3",
+        "LaunchConfigurationId": "asc-5fzsm72a",
+        "InstanceId": "ins-1fswxz1m",
+        "VersionNumber": 1,
+        "AddTime": "2018-08-21T12:05:12Z",
+        "CreationType": "AUTO_CREATION",
+        "AutoScalingGroupId": "asg-4o61gsxi",
+        "HealthStatus": "HEALTHY",
+        "LifeCycleState": "IN_SERVICE",
+        "LaunchConfigurationName": "series 2 local disk",
+        "InstanceType": "S2.SMALL2"
+      }
+    ],
+    "RequestId": "2ae3e836-d47a-431c-b54b-4e1c2f419e5b"
+  }
 }
 ```
 
@@ -78,13 +79,13 @@ https://as.tencentcloudapi.com/?Action=DescribeAutoScalingInstances
 
 ### API Explorer
 
-**This tool provides various capabilities such as online call, signature verification, SDK code generation, and quick API retrieval that significantly reduce the difficulty of using TencentCloud API.**
+**This tool allows online call, signature authentication, SDK code generation, and quick search of APIs to greatly improve the efficiency of using TencentCloud APIs.**
 
 * [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer?Product=as&Version=2018-04-19&Action=DescribeAutoScalingInstances)
 
 ### SDK
 
-TencentCloud API 3.0 comes with a set of complementary development toolkits (SDKs) that support multiple programming languages and make it easier to call the APIs.
+TencentCloud API 3.0 comes with SDKs that support multiple programming languages and make it easier to call the APIs.
 
 * [Tencent Cloud SDK 3.0 for Python](https://github.com/TencentCloud/tencentcloud-sdk-python)
 * [Tencent Cloud SDK 3.0 for Java](https://github.com/TencentCloud/tencentcloud-sdk-java)
@@ -99,11 +100,11 @@ TencentCloud API 3.0 comes with a set of complementary development toolkits (SDK
 
 ## 6. Error Codes
 
-Only the error codes related to this API are listed below. For other error codes, see [Common Error Codes](/document/api/377/20428#.E5.85.AC.E5.85.B1.E9.94.99.E8.AF.AF.E7.A0.81).
+The following only lists the error codes related to this API. For other error codes, see [Common Error Codes](/document/api/377/20428#.E5.85.AC.E5.85.B1.E9.94.99.E8.AF.AF.E7.A0.81).
 
 | Error Code | Description |
 |---------|---------|
-| InternalError | Internal error |
+| InternalError | Internal error. |
 | InvalidFilter | Invalid filter. |
-| InvalidParameter.Conflict | Multiple parameters specified conflict and cannot co-exist. |
-| InvalidParameterValue.Filter | Invalid filter. |
+| InvalidParameter.Conflict | The specified parameters conflict with each other and thus cannot be both specified |
+| InvalidParameterValue.Filter | Invalid filter |

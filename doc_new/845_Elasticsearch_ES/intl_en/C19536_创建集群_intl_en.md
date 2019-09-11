@@ -1,4 +1,4 @@
-﻿A cluster is the basic unit where ES provides hosted Elasticsearch services and you use and manage such services. This document describes how to quickly create an Elasticsearch cluster in the Tencent Cloud Console.
+A cluster is the basic unit where ES provides hosted Elasticsearch services and you use and manage such services. This document describes how to quickly create an Elasticsearch cluster in the Tencent Cloud Console.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Log in to the [ES Console](https://console.cloud.tencent.com/es) and click **Cre
 > The VPC cannot be changed or adjusted once the ES cluster is created.
 
  **Special note on network selection**
- - Cross-VPC access: If you need to access an ES cluster from a CVM instance located in another VPC in the same region, consider the [Peering Connection](https://cloud.tencent.com/document/product/553/18827) solution which can interconnect two different VPCs in the same region.
+ - Cross-VPC access: If you need to access an ES cluster from a CVM instance located in another VPC in the same region, consider the [Peering Connection](https://intl.cloud.tencent.com/document/product/215/5000) solution which can interconnect two different VPCs in the same region.
  - Basic network access: If your business is deployed in a basic network and you have never used a VPC, you can bind the CVM instance located in the basic network to the VPC where the ES cluster resides through Classiclink. For more information, see [Classiclink](https://intl.cloud.tencent.com/document/product/215/5002).
     Classiclink only supports VPCs in the IP range of `10.[0~47].0.0/16`. If you need to access the ES cluster from the basic network, please select a VPC in this range when creating the ES cluster.
 	
@@ -38,13 +38,13 @@ Log in to the [ES Console](https://console.cloud.tencent.com/es) and click **Cre
 - Number of dedicated master nodes: 3 or 5. An odd number of nodes ensures high availability and prevents the risk of split-brain.
 - Username: This is the username used to access Kibana and Platinum edition Elasticsearch clusters, which is defaulted to "elastic" and cannot be modified. In the Basic and Open Source editions, secure user authentication is not enabled, so no username or password is required when a cluster is accessed through an API, and this username is only used to log in to Kibana. In the Platinum edition, user permission verification is enabled, so the corresponding username and password are required when a cluster is accessed through an API.
 - Password: The password corresponding to the above-mentioned username. Please set it as required. If you forgot it, you can reset it on the details page.
-- Auto-renewal: Optional. A cluster under monthly subscription cannot be used after its expiration date. It is recommended to set auto-renewal for such type of clusters.
-![Create a cluster](https://main.qcloudimg.com/raw/95aee6deee0b2f9881729de033975fb0.png)
+- Auto-renewal: Optional. 
+![Create a cluster](https://main.qcloudimg.com/raw/0ce3c265c2e9d14f7f5ee0d5e24e8bb1.png)
 #### 2. Confirm and purchase
 
 Click **Next: Confirm Configuration Information** to confirm the configuration.
 
-![Confirm the configuration](https://main.qcloudimg.com/raw/c5be136a79b1a7fdc67dfb610ea78d6a.png)
+![Confirm the configuration](https://main.qcloudimg.com/raw/5265296302f5110d6f6069d7ab5aaebf.png)
 
 - Click **Activate** to create the cluster directly if the pay-as-you-go billing method is selected. You do not need to confirm the order or pay for it, as your account balance will be deducted on an hourly basis during cluster use.
 
@@ -56,11 +56,15 @@ Once successful activated, the cluster just created can be viewed in the [consol
 
 ### Cluster Access
 
-To help you get started quickly, ES provides several types of clients for accessing clusters. For more information, see [ES Access Method Overview](https://cloud.tencent.com/document/product/845/19539).
+To help you get started quickly, ES provides several types of clients for accessing clusters. 
+
+<!-- For more information, see [ES Access Method Overview](https://cloud.tencent.com/document/product/845/19539). -->
 
 ### Cluster Monitoring
 
-ES provides a rich set of monitoring metrics to help you view the status of clusters during their use. For more information, see [Viewing Monitoring Metrics](https://cloud.tencent.com/document/product/845/16995).
+ES provides a rich set of monitoring metrics to help you view the status of clusters during their use. 
+
+<!-- For more information, see [Viewing Monitoring Metrics](https://cloud.tencent.com/document/product/845/16995). -->
 
 In the Basic and Platinum editions, Kibana also offers monitoring metrics on the **Monitor** page in the left menu.
 

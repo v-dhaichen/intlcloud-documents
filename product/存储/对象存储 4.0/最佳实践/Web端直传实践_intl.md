@@ -5,10 +5,10 @@ This document describes how to directly upload files to a COS bucket from the we
 ## Procedure
 <span id="Preparations"></span>
 ### 1.Preparations
-(1) Go to the [COS Console](https://console.cloud.tencent.com/cos4) to create a bucket and obtain Bucket (bucket name) and Region (region name).
+(1) Go to the [COS Console](https://console.cloud.tencent.com/cos5) to create a bucket and obtain Bucket (bucket name) and Region (region name).
 (2) Go to the [Key Management Console](https://console.cloud.tencent.com/cam/capi) to obtain your project's SecretId and SecretKey.
 (3) In the COS Console, go to the created bucket and click **Basic Configuration** to configure the CORS rules, as shown below:
-![cors](//mc.qcloudimg.com/static/img/2e7791e9274ce3ebf8b25bbeafcd7b45/image.png)
+![cors](https://main.qcloudimg.com/raw/eb73177a2302ad976be301254bcd9630.png)
 
 ### 2. Set up temporary key service
 For security purposes, we recommend you to use temporary keys to calculate a signature. To create and use temporary keys, you need to set up the temporary key service on your server. For more information, see [PHP Example](https://github.com/tencentyun/cos-js-sdk-v5/blob/master/server/sts.php) and [Nodejs Example](https://github.com/tencentyun/cos-js-sdk-v5/blob/master/server/sts.js).
@@ -166,7 +166,7 @@ Your browser needs to support basic HTML5 features before you can perform an upl
 ```
 
 The result is as shown below:
-![Ajax 上传](https://main.qcloudimg.com/raw/4bfc2883d71deddccc76b250ebb6a051.png)
+![Ajax 上传](https://main.qcloudimg.com/raw/970bc04c0a1e0b3c5be077f360000424.png)
 
 #### Solution B: Upload with Form
 Lower version of browser (e.g. IE8) supports uploading files with Form. Implement this solution by referring to [XML APIs: PostObject API](https://intl.cloud.tencent.com/document/product/436/7751) and following the steps below:
@@ -311,7 +311,8 @@ Lower version of browser (e.g. IE8) supports uploading files with Form. Implemen
 </html>
 ```
 The result is as shown below:
-![Form 表单上传](https://main.qcloudimg.com/raw/ef666461bc5f88715f28934393ebe4f4.png)
+![Form 表单上传](https://main.qcloudimg.com/raw/90a3460c58ed7e056f08624ce329c1a4.png)
 ## Related Documents
 If you need to call more APIs, see the following JavaScript SDK documents:
 - [JavaScript SDK](https://intl.cloud.tencent.com/document/product/436/11459)
+

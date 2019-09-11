@@ -1,4 +1,4 @@
-﻿## Use Cases
+## Use Cases
 
 As your business grows, the amounts of data and access requests in a cluster are ever-changing and may increase significantly. When the size of the cluster fails to meet your actual business needs, you can dynamically adjust the cluster configuration to scale up the cluster. You can also temporarily scale down the cluster if the amounts of data and access requests get smaller. ES supports adjusting configuration items such as number of nodes, node types, and storage capacity of individual data nodes. In addition, it also supports adjusting the dedicated master nodes of the cluster as detailed below.
 
@@ -17,13 +17,6 @@ As your business grows, the amounts of data and access requests in a cluster are
 4. After the configuration adjustment starts, the cluster status changes to **processing**. After the status changes to **normal**, the cluster can be used normally.  
 5. You can view the progress of cluster adjustment on the cluster details page.
 
-
-- Adjust the data node configuration.
-  ![Adjust configuration](https://main.qcloudimg.com/raw/f96ec8b5d6c2df8a8a3afa670978ba51.png)
-- Adjust the master node configuration.
-  ![Dedicated master node](https://main.qcloudimg.com/raw/39074cebe31dd60be00c8c6d88ecd903.png)
-- View the progress of cluster adjustment.
-  ![Dedicated master node](https://main.qcloudimg.com/raw/9037032df309577154a12555c599d3b0.png)
 
 ## Note on Configuration Adjustment Fees
 

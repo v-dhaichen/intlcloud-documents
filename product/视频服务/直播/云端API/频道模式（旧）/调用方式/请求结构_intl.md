@@ -34,7 +34,7 @@ UTF-8 encoding is always used.
 </td><td>Name of the instruction to be executed by API, specified with Action.<br>
 <p>For example, Action=CreateLVBChannel
 </p>
-</td><td>For more information on complete instructions, please see <a href="https://cloud.tencent.com/document/product/267/5664" title="API Overview">API Overview</a>
+</td><td>For more information on complete instructions, please see <a href="https://intl.cloud.tencent.com/document/product/267/5664" title="API Overview">API Overview</a>
 </td></tr>
 <tr>
 <td>Instruction parameters
@@ -80,13 +80,13 @@ Common parameters are used for user identification and API authentication. Unles
 <tr>
 <td> SecretId
 </td><td> String
-</td><td> SecretId and SecretKey used for identification and applied for through the Tencent Cloud platform. SecretKey is used to generate a Signature. <br>For more information, please see <a href="/doc/api/258/API Authentication" title="API Authentication">API Authentication</a> page.
+</td><td> SecretId and SecretKey used for identification and applied for through the Tencent Cloud platform. SecretKey is used to generate a Signature. <br>For more information, please see API Authentication page.
 </td><td> Yes
 </td></tr>
 <tr>
 <td> Signature
 </td><td> String
-</td><td>Request signature, which is used to verify the validity of the request. <br>For more information, please see <a href="/doc/api/258/API Authentication" title="API Authentication">API Authentication</a> page.
+</td><td>Request signature, which is used to verify the validity of the request. <br>For more information, please see API Authentication page.
 </td><td> Yes
 </td></tr></tbody></table>
 

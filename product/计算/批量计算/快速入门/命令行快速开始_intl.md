@@ -7,7 +7,7 @@ Please complete the preparations as detailed in checklist in [Preparation](/doc/
 
 
 ### Install and configure CLI
-To configure CLI, see [Configuring CLI](/doc/product/440/6184). After the installation, check that it can properly run.
+To configure CLI, see [Configuring CLI](https://intl.cloud.tencent.com/document/product/1013/30220). After the installation, check that it can properly run.
 ```
 qcloudcli batch help
 
@@ -92,7 +92,7 @@ Enter the COS bucket access addresses created during preparations into StdoutRed
 The example specifies Guangzhou Zone 2 for resource application. You can select the corresponding availability zone for resource applicable according to the default region configured in CLI. For more information about region and availability zone, see [Regions and Availability Zones >>](/doc/product/213/6091).
 
 #### 4. Modify the JSON data for CLI on Windows (optional)
-The JSON data entered in CLI on Windows is different from that on Linux. For example, " should be replaced with \". For details, see the "Input Parameters in JSON Format" section in [CLI Quick Start](/doc/product/440/6185).
+The JSON data entered in CLI on Windows is different from that on Linux. For example, " should be replaced with \". 
 
 ## Viewing the Result
 

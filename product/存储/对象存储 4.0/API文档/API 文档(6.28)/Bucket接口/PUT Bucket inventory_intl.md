@@ -183,7 +183,7 @@ After the request above is made, COS returns the following response, indicating 
 HTTP/1.1 200 OK
 Content-Type: application/xml
 Content-Length: 0
-Date: Mon, 28 Aug 2018 02:53:38 GMT
+Date: Mon, Aug 28, 2018 02:53:38 GMT
 Server: tencent-cos
 x-cos-request-id: NTlhMzg1ZWVfMjQ4OGY3MGFfMWE1NF84Y2M
 ```

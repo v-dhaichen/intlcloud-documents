@@ -1,11 +1,15 @@
 ## Spectacular Acceleration and Global Coverage
 
-In order to allow your published content to reach users faster, Tencent Cloud CDN has set up more than 800 nodes across the nation, covering mainstream ISPs such as China Mobile, China Unicom and China Telecom as well as many medium and small-sized ISPs such as China Tietong and Great Wall Broadband. Standalone server on each node has a performance up to double-hundred-million and the total node bandwidth reaches over 70T, thus perfectly solving the problem of high access latency of user and instability caused by such factors as geographical location, network and origin server's performance.
+In order to allow your published content to reach users faster, Tencent Cloud CDN has set up more than 1300 nodes across the nation, covering mainstream ISPs such as China Mobile, China Unicom and China Telecom as well as many medium and small-sized ISPs such as China Tietong and Great Wall Broadband. Standalone server on each node has a performance up to double-hundred-million and the total node bandwidth reaches over 120T, thus perfectly solving the problem of high access latency of user and instability caused by such factors as geographical location, network and origin server's performance.
 
 **Nodes in Mainland China**
 
-Tencent Cloud CDN provides more than 100 overseas nodes with a coverage of more than 30 countries and regions across the globe to allow your business to go global seamlessly.
+Tencent Cloud CDN provides more than 200 overseas nodes with a coverage of more than 50 countries and regions across the globe to allow your business to go global seamlessly.
 ![](https://mc.qcloudimg.com/static/img/5c613ac74016730b3f144333bd5bf3bd/1.png)
+
+**Nodes in Overseas**
+
+![](https://main.qcloudimg.com/raw/e85db1a5259c8c920b8e3ee151109c6d.png)
 
 ## Intelligent Scheduling and Link Optimization
 
@@ -54,6 +58,6 @@ You can perform domain name management, setting changes, going online/going offl
 The comparison between the origin server that uses Tencent Cloud CDN and the one that does not in latency and availability is shown in the following figure. With the optimization of Tencent Cloud CDN, the latency is reduced by 5 times and the availability of resources is improved to 99.5% or more.
 ![](https://mc.qcloudimg.com/static/img/dc9c78168a5efdd9935c376ed7c4b8b0/CDN-Advantages.png)
 
-The above test results are based on the results of benchmarking test that is commonly used in the industry. For detailed test data and results, please [Click Here](https://cloud.tencent.com/doc/product/228/1198).
+The above test results are based on the results of benchmarking test that is commonly used in the industry. For detailed test data and results, please [Click Here](https://intl.cloud.tencent.com/doc/product/228/1198).
 
 

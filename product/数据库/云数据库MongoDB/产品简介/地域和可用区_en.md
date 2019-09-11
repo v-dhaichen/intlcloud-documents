@@ -4,7 +4,7 @@ Tencent Cloud hosted data centers are distributed in different locations across 
 
 Currently, the following available regions are offered by Tencent Cloud: 
 China: South China (Guangzhou), East China (Shanghai), North China (Beijing). 
-Outside China: Southeast Asia (Hong Kong) and North America (Toronto).
+Outside China: China (Hong Kong)  and North America (Toronto).
 
 
 Notes: 
@@ -27,7 +27,7 @@ Availability zones refer to Tencent Cloud physical data centers in a certain reg
 [South China]  Guangzhou Zone 1 (out of stock), Guangzhou Zone 2, Guangzhou Zone 3
 [East China]  Shanghai Zone 1
 [North China]  Beijing Zone 1
-[Southeast Asia]  Hong Kong Zone 1
+[South China]  Hong Kong Zone 1
 [North America]  Toronto Zone 1
 
 

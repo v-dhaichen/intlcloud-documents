@@ -41,7 +41,7 @@ This refers to the message directly passed through to the Android device, which 
 ### 3.3. Push Channel
 
 **Android vendor-specific channel**
-This refers to the push channel at the operating system level provided by Android mobile phone manufacturers, which enables message receipt and display without launching the app. Major Chinese mobile phone manufacturers has already launched this service. For details, see [Android Vendor-specific Channel](https://intl.cloud.tencent.com/document/product/1024/30716).
+This refers to the push channel at the operating system level provided by Android mobile phone manufacturers, which enables message receipt and display without launching the app. Major Chinese mobile phone manufacturers has already launched this service.
 
 **APNs**
 APNs is short for Apple Push Notification service, the push channel in iOS. All iOS push messages are sent to the device via APNs.
@@ -64,7 +64,7 @@ This is TPNS' visual push management interface, where you can send push messages
 This refers to the backend API provided by TPNS, which implements functions such as message push, device mapping management, and data querying. It makes it easier for you to customize pushes and is compatible with your existing business logic. For details, see [TPNS Backend REST API](https://intl.cloud.tencent.com/document/product/1024/30734).
 
 **Mobile SDK**
-TPNS provides a push SDK for both iOS and Android. The SDK is mainly used to display push messages and collect statistics. In addition, the SDK comes with a set of APIs that can help you achieve the business logic of targeted push. For details, see [Android SDK API](https://intl.cloud.tencent.com/document/product/1024/30715l) or [iOS SDK API](https://intl.cloud.tencent.com/document/product/1024/30727).
+TPNS provides a push SDK for both iOS and Android. The SDK is mainly used to display push messages and collect statistics. In addition, the SDK comes with a set of APIs that can help you achieve the business logic of targeted push. For details, see [Android SDK API](https://intl.cloud.tencent.com/document/product/1024/30715) or [iOS SDK API](https://intl.cloud.tencent.com/document/product/1024/30727).
 
 
 ### 3.5. Push Process

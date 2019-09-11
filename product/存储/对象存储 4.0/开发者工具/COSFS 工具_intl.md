@@ -51,7 +51,7 @@ In this case, you need to manually install the fuse version by following the pro
 Link on Github: [COSFS Tool](https://github.com/tencentyun/cosfs-v4.2.1)
 
 ### Installing Tool 
-You can directly upload the downloaded source code to the specified directory, or download the code to the specified directory using GitHub. The following example shows how to download source code to `/usr/cosfs` with GitHub:
+You need to download COSFS source code from Github to specified directory. The following example shows how to download source code to `/usr/cosfs` with GitHub:
 ```
 git clone https://github.com/tencentyun/cosfs-v4.2.1 /usr/cosfs
 ```
@@ -64,13 +64,13 @@ make
 sudo make install
 ```
 ### Configuration File
-In `/etc/passwd-cosfs` file, configure the name of your bucket and the corresponding SecretId and SecretKey. For relevant concepts, please see [Concepts](https://cloud.tencent.com/document/product/436/6225). Parameters are separated with a colon. In addition, set read permission for `/etc/passwd-cosfs`. The command format is as follows:
+In `/etc/passwd-cosfs` file, configure the name of your bucket and the corresponding SecretId and SecretKey. For relevant concepts, please see [Concepts](https://intl.cloud.tencent.com/document/product/436/18507). Parameters are separated with a colon. In addition, set read permission for `/etc/passwd-cosfs`. The command format is as follows:
 ```
 echo <bucketname>:<SecretId>:<SecretKey> > /etc/passwd-cosfs
 chmod 640 /etc/passwd-cosfs
 ```
 Where:
-The bucketname/SecretId/SecretKey should be replaced with your true information.
+The bucketname/SecretId/SecretKey should be replaced with your actual information.
 #### Example:
 ```
 echo buckettest:AKID8ILGzYjHMG8zhGtnlX7Vi4KOGxRqg1aa:LWVJqIagbFm8IG4sNlrkeSn5DLI3dCYi > /etc/passwd-cosfs
@@ -82,9 +82,9 @@ Execute the following command to mount the configured bucket to the specified di
 cosfs your-APPID:your-bucketname your mount-point -ourl=cos-domain-name -odbglevel=info
 ```
 Where:
-- your-APPID/your-bucketname is replaced with your true information.
+- your-APPID/your-bucketname is replaced with your actual information.
 - your-mount-point is replaced with the local directory to which the bucket needs to be mounted (such as /mnt).
-- cos-domain-name is the domain name of the region to which the bucket belongs in a format of `http://cos.<Region>.myqcloud.com`. Region is the region abbreviation for XML API in [Available Regions](https://cloud.tencent.com/document/product/436/6224), such as `http://cos.ap-guangzhou.myqcloud.com`, `http://cos.eu-frankfurt.myqcloud.com`.
+- cos-domain-name is the domain name of the region to which the bucket belongs in a format of `http://cos.<Region>.myqcloud.com`. Region is the region abbreviation for XML API in [Available Regions](https://intl.cloud.tencent.com/document/product/436/6224), such as `http://cos.ap-guangzhou.myqcloud.com`, `http://cos.eu-frankfurt.myqcloud.com`.
 - The -odbglevel parameter indicates the level of information.
 #### Example:
 ```
