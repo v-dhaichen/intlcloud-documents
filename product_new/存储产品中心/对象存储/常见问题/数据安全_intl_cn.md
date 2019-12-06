@@ -39,7 +39,7 @@
 
 1. 找到 **Policy权限设置项**，在【图形设置】下单击【添加策略】。
 2. 按照下图所示添加对应权限设置，单击【确定】保存。
-   ![Polcy图形设置](https://main.qcloudimg.com/raw/c739d31636d117757449c7e0e106ad84.png)
+   ![Polcy图形设置](https://main.qcloudimg.com/raw/6c9262116cb78654ea5c25d9ba483595.png)
 
 #### 方法 2：
 
@@ -94,7 +94,7 @@ COS 每个主账号下存储桶和对象 ACL + Policy 的规则数量最多为10
 
 ### 如何为子公司或员工创建子账号，并授予特定存储桶的访问权限？
 
-详情请参见 [授权子账号访问 COS ](https://cloud.tencent.com/document/product/436/11714)，创建子账号并对其授权。
+详情请参见 [授权子账号访问 COS ](https://intl.cloud.tencent.com/document/product/436/11714)，创建子账号并对其授权。
 
 ### 如何授权某些特定子账号只对某个存储桶有操作权限？
 

@@ -32,13 +32,14 @@ COS provides a range of API operations on various resources. For more informatio
 
 ### Private principle
 
-**By default, all Tencent Cloud COS resources are private.**
+> **Note:** 
+> By default, all Tencent Cloud COS resources are private.
 
-The resource owner (the Tencent Cloud root account creating a bucket resource) has the highest permission on the resource, and can grant access permissions to others or anonymous users by editing and writing an access policy.
+- The resource owner (the Tencent Cloud root account creating a bucket resource) has the highest permission on the resource, and can grant access permissions to others or anonymous users by editing and writing an access policy.
 
-When a Tencent Cloud CAM account is used to create a bucket or upload an object, its parent root account is the resource owner.
+- When a Tencent Cloud CAM account is used to create a bucket or upload an object, its parent root account is the resource owner.
 
-The root account of the bucket owner can authorize other Tencent Cloud root accounts to upload objects (i.e. cross-account upload). In this case, the object owner is still the root account of the bucket owner.
+- The root account of the bucket owner can authorize other Tencent Cloud root accounts to upload objects (i.e. cross-account upload). In this case, the object owner is still the root account of the bucket owner.
 
 ### Access control policy
 
@@ -80,17 +81,17 @@ An ACL is described in the XML language. It is a list of specified grantees and 
 
 >The resource owner always has FULL_CONTROL permission on the resource, regardless of whether this is described in the issued ACL.
 
-The bucket ACL in this example describes the full control permission of the bucket owner (UIN: 1250000000):
+The bucket ACL in this example describes the full control permission of the bucket owner (UIN: 100000000001):
 
 ```xml
 <AccessControlPolicy>
   <Owner>
-    <ID>qcs::cam::uin/1250000000:uin/1250000000</ID>
+    <ID>qcs::cam::uin/100000000001:uin/100000000001</ID>
   </Owner>
   <AccessControlList>
     <Grant>
       <Grantee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RootAccount">
-        <ID>qcs::cam::uin/1250000000:uin/1250000000</ID>
+        <ID>qcs::cam::uin/100000000001:uin/100000000001</ID>
       </Grantee>
       <Permission>FULL_CONTROL</Permission>
     </Grant>
@@ -98,17 +99,17 @@ The bucket ACL in this example describes the full control permission of the buck
 </AccessControlPolicy>
 ```
 
-The object ACL in this example describes the full control permission of the object owner (UIN: 1250000000) and grants the read permission to all users (the public-read permission to anonymous users):
+The object ACL in this example describes the full control permission of the object owner (UIN: 100000000001) and grants the read permission to all users (the public-read permission to anonymous users):
 
 ```xml
 <AccessControlPolicy>
   <Owner>
-    <ID>qcs::cam::uin/1250000000:uin/1250000000</ID>
+    <ID>qcs::cam::uin/100000000001:uin/100000000001</ID>
   </Owner>
   <AccessControlList>
     <Grant>
       <Grantee>
-        <ID>qcs::cam::uin/1250000000:uin/1250000000</ID>
+        <ID>qcs::cam::uin/100000000001:uin/100000000001</ID>
       </Grantee>
       <Permission>FULL_CONTROL</Permission>
     </Grant>

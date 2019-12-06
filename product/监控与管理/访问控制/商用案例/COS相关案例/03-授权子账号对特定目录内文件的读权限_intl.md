@@ -1,4 +1,4 @@
-A sub-account Developer under the enterprise account CompanyExample (ownerUin is 12345678 and appId is 8000001) requires read permission of files in the Bucket1's directory dir1 of the COS service in Shanghai region under the enterprise account CompanyExample.
+A sub-account Developer under the enterprise account CompanyExample (ownerUin is 12345678 and appId is 1250000000) requires read permission of files in the Bucket1's directory dir1 of the COS service in Shanghai region under the enterprise account CompanyExample.
 
 Solution A:
 
@@ -6,13 +6,18 @@ Step 1: Create the following policy using policy syntax
 ```
  {
     "version": "2.0",
-    "statement":
+    "statement":[
      {
          "effect": "allow",
-         "action": "cos:*",
-         "resource": ["qcs::cos:cn-east:uid/8000001:prefix//8000001/Bucket1/dir1/*",
-                    "qcs::cos:cn-east:uid/8000001:prefix//8000001/Bucket1/dir1"]
+         "action":  [
+                    "cos:List*",
+                    "cos:Get*",
+                    "cos:Head*",
+                    "cos:OptionsObject"
+                ],
+         "resource": "qcs::cos:ap-shanghai:uid/1250000000:Bucket1-1250000000/dir1/*"
      }
+   ]
 }
 ```
 

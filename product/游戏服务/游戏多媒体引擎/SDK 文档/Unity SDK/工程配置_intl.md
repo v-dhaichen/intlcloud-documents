@@ -6,11 +6,11 @@ You can obtain the SDK by the following steps:
 
 ### Download SDK
 
-Go to the [Download Instructions](https://intl.cloud.tencent.com/document/product/607/18521) page.
+Go to the [Download Guide](https://intl.cloud.tencent.com/document/product/607/18521) page.
 
 Locate SDK resource for Unity on the interface.
 
-Click **Download**. The SDK resource contains following items after decompression:
+Click **Download**. The SDK resource contains the following items after decompression:
 
 ![](https://main.qcloudimg.com/raw/55494d9bb9145938f0594416f73b29f7.png)
 
@@ -32,7 +32,7 @@ Copy the files in the Scripts folder in the SDK to the folder used to store code
 ![](https://main.qcloudimg.com/raw/8904a83c6173fa7c5b04ddb0e48138ca.png)
 
 ### 3. Audio settings
-In the Unity editor, go to **Edit** -> **Project Setting** -> **Audio** and use the default system settings. If you make a change to the settings, Unity playback sound effect will be interrupted due to the iobuffer set on the iOS device.
+In the Unity editor, go to **Edit** -> **Project Settings** -> **Audio** and use the default system settings. If you make a change to the settings, Unity playback sound effect will be interrupted due to the iobuffer set on the iOS device.
 ![](https://main.qcloudimg.com/raw/df14517cac7fc29383c90720627572c7.png)
 
 If the settings are **as follows**, Unity playback sound effect **will be interrupted** due to the iobuffer set on the iOS device.

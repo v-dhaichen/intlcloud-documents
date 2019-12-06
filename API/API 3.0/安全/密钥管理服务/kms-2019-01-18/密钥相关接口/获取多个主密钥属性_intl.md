@@ -2,7 +2,7 @@
 
 API domain name: kms.tencentcloudapi.com
 
-This API describes the attribute information of the specified customer master keys (CMKs) in batches.
+This API is used to get the attributes of multiple customer master keys (CMKs) in a single request.
 
 API request rate limit: 100 requests/sec.
 
@@ -14,19 +14,19 @@ The list below contains only the API request parameters and certain common param
 |---------|---------|---------|---------|
 | Action | Yes | String | Common parameter. The value used for this API: DescribeKeys |
 | Version | Yes | String | Common parameter. The version of this API: 2019-01-18 |
-| Region | Yes | String | Common parameter. For more information, see the [List of Regions](/document/api/573/34406#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) supported by the product. |
-| KeyIds.N | Yes | Array of String | ID of CMKs to be queried in batches. Up to 100 KeyIds are supported for each query |
+| Region | Yes | String | Common parameter. For more information, see the [list of regions](/document/api/573/34406#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) supported by the product. |
+| KeyIds.N | Yes | Array of String | IDs of the CMKs to be queried. You can specify up to 100 KeyIds in each query. |
 
 ## 3. Output Parameters
 
 | Parameter name | Type | Description |
 |---------|---------|---------|
-| KeyMetadatas | Array of [KeyMetadata](/document/api/573/34431#KeyMetadata) | Returned attribute information list <br/>Note: This field may return null, indicating that no valid values can be obtained. |
+| KeyMetadatas | Array of [KeyMetadata](/document/api/573/34431#KeyMetadata) | List of key attributes returned <br/>Note: This field may return null, indicating that no valid values can be obtained. |
 | RequestId | String | Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues. |
 
 ## 4. Examples
 
-### Example 1. Getting Attributes of Multiple CMKs
+### Example 1. Getting attributes of multiple CMKs
 
 Get attributes of multiple CMKs.
 
@@ -108,8 +108,8 @@ The following only lists the error codes related to this API. For other error co
 | Error Code | Description |
 |---------|---------|
 | InternalError | Internal error. |
-| InvalidParameter | Incorrect parameter. |
-| InvalidParameterValue.DuplicatedKeyId | The KeyId is duplicated. |
+| InvalidParameter | Invalid parameter. |
+| InvalidParameterValue.DuplicatedKeyId | There are duplicate `KeyId`s. |
 | InvalidParameterValue.InvalidKeyId | Invalid KeyId. |
 | ResourceUnavailable.CmkNotFound | The CMK does not exist. |
 | UnauthorizedOperation | Unauthorized operation. |

@@ -3,16 +3,16 @@
 | API name | Description |
 |---------|---------|
 | [CreateKey](/document/api/573/34430) | Creates a CMK |
-| [Decrypt](/document/api/573/34429) | Decrypts |
+| [Decrypt](/document/api/573/34429) | Decrypts ciphertext |
 | [DescribeKey](/document/api/573/34428) | Gets attributes of a CMK |
 | [DescribeKeys](/document/api/573/34427) | Gets attributes of multiple CMKs |
 | [DisableKey](/document/api/573/34426) | Disables a CMK |
 | [DisableKeyRotation](/document/api/573/34425) | Disables key rotation |
-| [DisableKeys](/document/api/573/34424) | Disables CMKs in batches |
+| [DisableKeys](/document/api/573/34424) | Disables multiple CMKs |
 | [EnableKey](/document/api/573/34423) | Enables a CMK |
 | [EnableKeyRotation](/document/api/573/34422) | Enables key rotation |
-| [EnableKeys](/document/api/573/34421) | Enables CMKs in batches |
-| [Encrypt](/document/api/573/34420) | Encrypts |
+| [EnableKeys](/document/api/573/34421) | Enables multiple CMKs |
+| [Encrypt](/document/api/573/34420) | Encrypts data |
 | [GenerateDataKey](/document/api/573/34419) | Generates a data key |
 | [GetKeyRotationStatus](/document/api/573/34418) | Queries key rotation status |
 | [GetServiceStatus](/document/api/573/34417) | Queries service status |

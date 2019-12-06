@@ -19,7 +19,7 @@ Here you can find information about COS's pay-as-you-go billing. To learn more a
    <tr>
       <th>Internet Downstream Traffic</th>
       <th>CDN Origin-pull Traffic</th>
-      <th>Cross-origin Replication Traffic</th>
+      <th>Cross Region Replication Traffic</th>
    </tr>
    <tr>
       <td rowspan="3">Chengdu (Southwest China),  Chongqing (Southwest China)</td>
@@ -350,8 +350,8 @@ Here you can find information about COS's pay-as-you-go billing. To learn more a
 
 ###  Administrative Feature Pricing
 
-> Note:
-> The inventory feature and select feature are currently in beta and can be used for free. We will send out a notification when this becomes a paid feature. 
+>- The inventory feature and select feature are currently in beta and can be used for free. We will send out a notification when this becomes a paid feature. 
+>- The inventory feature cost is settled on a monthly basis, and the select feature cost is settled on a daily basis.
 
 <table>
    <tr>
@@ -368,17 +368,17 @@ Here you can find information about COS's pay-as-you-go billing. To learn more a
    <tr>
       <td>Chengdu (Southwest China), <br>Chongqing (Southwest China)</td>
       <td>0.0027</td>
-      <td>0.0822</td>
+      <td>0.0018</td>
    </tr>
    <tr>
       <td>Beijing (North China), Shanghai (East China), <br>Guangzhou (South China)</td>
       <td>0.0027</td>
-      <td>0.0822</td>
+      <td>0.0018</td>
    </tr>
    <tr>
       <td>Shenzhen Finance</td>
       <td rowspan=3>N/A</td>
-      <td rowspan=3>0.3425</td>
+      <td rowspan=3>0.0073</td>
    </tr>
    <tr>
       <td>Shanghai Finance</td>
@@ -389,56 +389,56 @@ Here you can find information about COS's pay-as-you-go billing. To learn more a
    <tr>
       <td>Hong Kong, China</td>
       <td>0.0028</td>
-      <td>0.1165</td>
+      <td>0.0025</td>
    </tr>
    <tr>
       <td>Singapore</td>
       <td>0.0028</td>
-      <td>0.1165</td>
+      <td>0.0025</td>
    </tr>
    <tr>
       <td>Mumbai</td>
       <td>0.0028</td>
-      <td>0.1165</td>
+      <td>0.0025</td>
    </tr>
    <tr>
       <td>Seoul</td>
       <td>0.0028</td>
-      <td>0.1028</td>
+      <td>0.0022</td>
    </tr>
    <tr>
       <td>Bangkok</td>
       <td>0.0028</td>
-      <td>0.1165</td>
+      <td>0.0025</td>
    </tr>
    <tr>
       <td>Tokyo</td>
       <td>0.0028</td>
-      <td>0.1028</td>
+      <td>0.0022</td>
    </tr>
    <tr>
       <td>Silicon Valley</td>
       <td>0.0028</td>
-      <td>0.1028</td>
+      <td>0.0022</td>
    </tr>
    <tr>
       <td>Virginia</td>
       <td>0.0025</td>
-      <td>0.0891</td>
+      <td>0.0019</td>
    </tr>
    <tr>
       <td>Toronto</td>
       <td>0.0025</td>
-      <td>0.1028</td>
+      <td>0.0022</td>
    </tr>
    <tr>
       <td>Frankfurt</td>
       <td>0.0027</td>
-      <td>0.1165</td>
+      <td>0.0025</td>
    </tr>
    <tr>
       <td>Moscow</td>
       <td>0.0028</td>
-      <td>0.1028</td>
+      <td>0.0022</td>
    </tr>
 </table>

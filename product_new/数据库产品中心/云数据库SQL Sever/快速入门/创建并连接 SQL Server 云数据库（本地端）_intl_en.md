@@ -1,7 +1,7 @@
 This document describes how to create a TencentDB for SQL Server instance, perform port mapping using a Linux-based CVM instance with a public IP, connect to the database instance using SQL Server Management Studio (SSMS) to run a simple query, and delete the database instance.
 If you need to connect to a TencentDB for SQL Server instance using SSMS from a Windows-based CVM instance, see [Creating and Connecting to a TencentDB for SQL Server Instance (from a Windows-based CVM Instance)](https://intl.cloud.tencent.com/document/product/238/11626).
 
->! You must have a Tencent Cloud account before creating a TencentDB for SQL Server instance. For more information about how to register a Tencent Cloud account, see [here](https://cloud.tencent.com/document/product/378/17985).
+>You must have a Tencent Cloud account before creating a TencentDB for SQL Server instance. For more information about how to register a Tencent Cloud account, see [here](https://intl.cloud.tencent.com/document/product/378/17985).
 
 ## Creating a TencentDB for SQL Server Instance
 1. Log in to the [TencentDB Console](https://console.cloud.tencent.com/cdb) and select **SQL Server** > **Instance List*.
@@ -35,7 +35,7 @@ For data security considerations, TencentDB for SQL Server currently doesn't sup
 ![](//mc.qcloudimg.com/static/img/8a489ede3e8ae598a6530e77b9481eab/image.png)
 6. On the port mapping configuration page, configure the corresponding parameters.
 ![](https://main.qcloudimg.com/raw/6b6b4a0ee3982ef6ec2261ce8cfc5559.png)
-7. Download and install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) locally. For more information on SSMS, see Microsoft's official document - [Use SQL Server Management Studio](https://docs.microsoft.com/zh-cn/sql/database-engine/use-sql-server-management-studio?view=sql-server-2014).
+7. Download and install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) locally. For more information on SSMS, see Microsoft's official document - [Use SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/database-engine/use-sql-server-management-studio?view=sql-server-2014).
 8. Start SSMS locally. In the **Connect to Server** interface, enter the relevant information to connect to TencentDB. Click **Connect** and wait a few minutes before SSMS connects to your database instance.
 ![](//mc.qcloudimg.com/static/img/1cac47c4fc515d30d2cb5a0ef0141e22/image.png)
  - Server type: Select Database Engine.

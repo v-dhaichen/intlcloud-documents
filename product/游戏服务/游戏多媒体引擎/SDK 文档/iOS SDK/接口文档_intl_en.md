@@ -21,7 +21,7 @@ This document describes the integration for iOS in details to help iOS developer
 - The Poll API should be called periodically to trigger event callback.
 - Refer to the callback message list for callback information.
 - Device related operations can only be done after entering a room.
-- For error code details, see [Error Codes](https://intl.cloud.tencent.com/document/product/607/15173)
+- For error code details, see [Error Code](https://intl.cloud.tencent.com/document/product/607/15173).
 
 ## How to Use
 ![](https://main.qcloudimg.com/raw/810d0404638c494d9d5514eb5037cd37.png)
@@ -29,7 +29,7 @@ This document describes the integration for iOS in details to help iOS developer
 
 ## Initialization-related APIs
 The SDK should be initialized before using real-time voice and offline voice.
-For usage problems, see [General Problems](https://intl.cloud.tencent.com/document/product/607/30254).
+For usage problems, see [General Issues](https://intl.cloud.tencent.com/document/product/607/30254).
 
 | API     | Description   |
 | ------------- |:-------------:|
@@ -83,7 +83,7 @@ With the API class, the Delegate method is used to send callback notifications t
 
 ### Initialize the SDK
 
-For more information on getting parameters, see [Integration Guide](https://intl.cloud.tencent.com/document/product/607/10782).
+For more information on getting parameters, see [Access Guide](https://intl.cloud.tencent.com/document/product/607/10782).
 SdkAppId and openId are the required parameters for requesting this API, where openId is for identifying a user and must be unique in an Application (only INT64 value type is supported). You can get SdkAppId from Tencent Cloud Console, and set rules for creating openId as a developer.
 You must initialize the SDK before entering a room.
 #### Function prototype
@@ -175,7 +175,7 @@ You can modify kAudioSessionProperty_AudioCategory to change the setting. For mo
 
 ## APIs For Voice Chat Room
 After the initialization, API for entering a room should be called before Voice Chat can start.
-For usage problems, see [Real-time Voice Problems](https://intl.cloud.tencent.com/document/product/607/30257).
+For usage problems, see [Voice Chat FAQ](https://intl.cloud.tencent.com/document/product/607/30257).
 
 | API     | Description   |
 | ------------- |:-------------:|
@@ -913,8 +913,8 @@ ITMGContext GetPTT -(void) StartRecordingWithStreamingRecognition(const NSString
 |Parameter     | Type         |Description|
 | ------------- |:-------------:|-------------|
 | filePath    	|NSString* 	|Indicates the path for storing the voice file	|
-| speechLanguage    |NSString*                     |Recognizes specified language. See [language reference list](https://github.com/TencentMediaLab/GME/blob/master/GME%20Developer%20Manual/GME%20SpeechToText.md)|
-| translateLanguage    |NSString*                     |Translates into specified language. See [language reference list](https://github.com/TencentMediaLab/GME/blob/master/GME%20Developer%20Manual/GME%20SpeechToText.md) (This parameter is not available. Enter the value for speechLanguage.) |
+| speechLanguage    |NSString*                     |Recognizes specified language. See [language reference list](https://intl.cloud.tencent.com/document/product/607/30260)|
+| translateLanguage    |NSString*                     |Translates into specified language. See [language reference list](https://intl.cloud.tencent.com/document/product/607/30260) (This parameter is not available. Enter the value for speechLanguage.) |
 
 #### Sample code  
 ```
@@ -1300,8 +1300,8 @@ ITMGContext GetPTT -(void)SpeechToText:(NSString*)fileID (NSString*)speechLangua
 |Parameter     | Type         |Description|
 | ------------- |:-------------:|-------------|
 | fileID    |NSString*                     |Voice file url|
-| speechLanguage    |NSString*                     |Recognizes specified language. See [language reference list](https://github.com/TencentMediaLab/GME/blob/master/GME%20Developer%20Manual/GME%20SpeechToText.md)|
-| translatelanguage    |NSString*                     |Translates into specified language. See [language reference list](https://github.com/TencentMediaLab/GME/blob/master/GME%20Developer%20Manual/GME%20SpeechToText.md) (This parameter is not available. Enter the value for speechLanguage.)|
+| speechLanguage    |NSString*                     |Recognizes specified language. See [language reference list](https://intl.cloud.tencent.com/document/product/607/30260)|
+| translatelanguage    |NSString*                     |Translates into specified language. See [language reference list](https://intl.cloud.tencent.com/document/product/607/30260) (This parameter is not available. Enter the value for speechLanguage.)|
 
 #### Sample code  
 ```

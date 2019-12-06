@@ -1,8 +1,14 @@
 {
   "其他接口": {
     "en": "Other APIs"
-  }, 
+  },
   "应用相关接口": {
-    "en": ""
+    "en": "Application APIs"
+  },
+  "用量相关接口": {
+    "en": "Usage APIs"
+  },
+  "语音分析相关接口": {
+    "en": "Voice Analysis APIs"
   }
 }

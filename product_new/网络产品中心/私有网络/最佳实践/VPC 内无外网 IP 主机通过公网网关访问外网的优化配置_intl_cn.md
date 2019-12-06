@@ -1,25 +1,25 @@
 ## 环境说明
 客户在腾讯云 VPC 中的部分主机没有外网 IP，但需要访问外网时，可以购买公网网关主机，将这些主机作为其它没有外网 IP 的主机访问 Internet 的外网出口。公网网关主机将对出网流量进行源地址转换，所有其他主机访问外网的流量经过公网网关后，源 IP 都被转换为公网网关主机的 IP 地址，如下图所示：
-![](//mccdn.qcloud.com/img56c6b95099539.png)
+![](https://main.qcloudimg.com/raw/b2fb63bfa8fc03cde6cedcde845a9b65.png)
 
 要完成上述架构，需要完成几个步骤，步骤流程如下图所示：
-![](https://main.qcloudimg.com/raw/aa7665e70518225250d1a82a14eaa0d4.png)
+![](https://main.qcloudimg.com/raw/8fc0ad20600a2831b5a1b32ce1b66e0b.png)
 ## 架构搭建
 ### 创建网关子网
-公网网关只能转发非所在子网的路由转发请求，因此，公网网关主机不能与需要借助公网网关访问外网的 CVM 处于同一个子网下，需要先建立一个独立的网关子网，详细操作步骤，请参见 [创建网关子网](https://intl.cloud.tencent.com/document/product/215/31824)。
-![](//mccdn.qcloud.com/img56c6bae35eb98.png)
+公网网关只能转发非所在子网的路由转发请求，因此，公网网关主机不能与需要借助公网网关访问外网的 CVM 处于同一个子网下，需要先建立一个独立的网关子网。<!--详细操作步骤，请参见 [创建网关子网]()-->
+![](https://main.qcloudimg.com/raw/83b6487f44f451a40237e785e6d262c6.png)
 
 ### 购买公网网关
-在刚刚创建好的网关子网下，购买公网网关，详细操作步骤，请参见 [购买公网网关](https://intl.cloud.tencent.com/document/product/215/31825)。
+在刚刚创建好的网关子网下，购买公网网关。<!--详细操作步骤，请参见 [购买公网网关]()-->
 
 ### 创建网关子网路由表
-网关子网和普通子网不能关联同一张路由表，需要新建一张独立的网关路由表，并网关子网关联该路由表，详细操作步骤，请参见 [创建网关子网路由表](https://intl.cloud.tencent.com/document/product/215/31826)。
-![](//mccdn.qcloud.com/img56c6bbdc8d197.png)
-![](//mccdn.qcloud.com/img56c6bbe5752ab.png)
+网关子网和普通子网不能关联同一张路由表，需要新建一张独立的网关路由表，并网关子网关联该路由表。<!--详细操作步骤，请参见 [创建网关子网路由表]()-->
+![](https://main.qcloudimg.com/raw/af6228ca3acee55744453e1d3f9b962e.png)
+![](https://main.qcloudimg.com/raw/3d4ef8d4404a3d70ca24a7cb8c793bf0.png)
 
 ### 配置普通子网路由表
-配置普通子网的路由表，配置默认路由走公网网关主机，使得普通子网内主机能通过公网网关的路由转发能力访问外网，详细操作步骤，请参见 [配置普通子网路由表](https://intl.cloud.tencent.com/document/product/215/31827)。
-![](//mccdn.qcloud.com/img56c6bc54c5dd6.png)
+配置普通子网的路由表，配置默认路由走公网网关主机，使得普通子网内主机能通过公网网关的路由转发能力访问外网。<!--详细操作步骤，请参见 [配置普通子网路由表]()-->
+![](https://main.qcloudimg.com/raw/6e9e84fcc6cd439137eda3476375fa1f.png)
 
 ## 配置优化
 公网网关主机会默认配置 iptables 的 NAT 规则，以及打开 kernel 的 ip_forward，基本的公网网关功能已经完全具备。建议经过下述配置，以达到更好的性能。

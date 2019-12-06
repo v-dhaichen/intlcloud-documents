@@ -1,16 +1,16 @@
 ## 简介
-C# SDK 提供获取对象 URL、计算签名和获取请求预签名 URL 接口。
+ .NET SDK 提供获取对象 URL、计算签名和获取请求预签名 URL 接口。
 
 ## 获取对象 URL 
-```C#
+```.Net
 string GetAccessURL(CosRequest request);
 ```
 ## 计算签名
-```C#
+```.Net
 string GenerateSign(string method, string path, Dictionary<string, string> queryParameters, Dictionary<string, string> headers, long signDurationSecond)；
 ```
 ## 获取请求预签名 URL 
-```C#
+```.Net
 string GenerateSignURL(PreSignatureStruct preSignatureStruct);
 ```
 ### 参数说明
@@ -22,7 +22,7 @@ string GenerateSignURL(PreSignatureStruct preSignatureStruct);
 |path|string|HTTP 请求路径，即对象键|
 |headers|`Dictionary<string, string>`|签名是否校验 header|
 |queryParameters|`Dictionary<string, string>`|签名是否校验请求 url 中查询参数|
-|signDurationSecond|long|签名有效时间，单位为秒|
+|signDurationSecond|long|签名有效时间（单位为秒），例如签名有效时期为1分钟：60|
 
 ### PreSignatureStruct 结构体说明
 通过 PreSignatureStruct 对象获取对应预签名请求 URL，用于发送请求。
@@ -37,7 +37,7 @@ string GenerateSignURL(PreSignatureStruct preSignatureStruct);
 |key|string|对象键|
 |headers|`Dictionary<string, string>`|签名是否校验 header|
 |queryParameters|`Dictionary<string, string>`|签名是否校验请求 url 中查询参数|
-|signDurationSecond|long|签名有效时间，单位为秒|
+|signDurationSecond|long|签名有效时间（单位为秒），例如签名有效时期为1分钟：60|
 
 ## 永久密钥预签名请求示例
 
@@ -162,7 +162,7 @@ catch (COSXML.CosException.CosServerException serverEx)
 ## 临时密钥预签名请求示例
 
 ### 上传请求示例
-```C#
+```.NET
 try
 {
 	//使用临时密钥初始化 CosXml
@@ -221,7 +221,7 @@ catch (COSXML.CosException.CosServerException serverEx)
 ```
 
 ### 下载请求示例
-```C#
+```.NET
 try
 {
 	//使用临时密钥初始化 CosXml

@@ -3,7 +3,7 @@ Tencent Cloud COS provides hotlink protection support for users to avoid unneces
 
 ## Procedure
 1. Log in to the [COS Console](https://intl.cloud.tencent.com/login) and then select the **Bucket List** in the left pane to go to the Bucket List page. Click the bucket (such as examplebucket-1250000000) for which you want to set hotlink protection to enter the bucket.
-![](https://main.qcloudimg.com/raw/15ae8a1de9fe03aa1ed4484da5c5ce4a.png)
+![](https://main.qcloudimg.com/raw/4f30dc2b51d5f1e549b485f7ef004213.png)
 2. Click **Basic Configuration**, find Hotlink Protection Settings, and click **Edit**.
 ![](https://main.qcloudimg.com/raw/235d3158684e32b4b92daf0e81bd6db6.png)
 3. Modify the current status to Enabled, select a list type (blacklist or whitelist), enter applicable domain names, and then click **Save**.
@@ -37,7 +37,8 @@ Webmaster B manages a website:
 ```shell
 www.fake.com
 ```
-and wants to put this image on `www.fake.com'. But he doesn't want to pay for traffic costs. He uses the image on his site by copying the following address and placing it onto the homepage index.html on `www.fake.com`.
+
+and wants to put this image on `www.fake.com`. But he doesn't want to pay for traffic costs. He uses the image on his site by copying the following address and placing it onto the homepage index.html on `www.fake.com`.
 ```shell
 examplebucket-1250000000.file.myqcloud.com/picture.jpg
 ```
@@ -61,3 +62,6 @@ The image is also displayed normally when `http://www.fake.com/index.html` is ac
 
 The image is displayed normally when `http://www.example.com/index.html` is accessed.
 The image cannot be displayed when `http://www.fake.com/index.html` is accessed.
+## Mini program related instructions
+1. The referer of the applet network request does not allow setting, and the format is fixed at https://servicewechat.com/{appid}/{version}/page-frame.html. For details, please see [Mini program development documentation](https://developers.weixin.qq.com/miniprogram/en/dev/ ).
+2. To access COS resources via the WeChat Mini program, configure the hotlink protection whitelist in the COS console: servicewechat.com.

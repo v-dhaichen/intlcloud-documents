@@ -1,6 +1,6 @@
-Tencent Cloud SMS service provides two types of text messaging services: CSMS and GSMS. Click **International SMS** if the mobile numbers in your number file are non-Chinese numbers. Follow the procedure below to send an GSMS message.
+Tencent Cloud SMS service provides two types of text messaging services: CSMS and GSMS. Click **Global SMS** if the mobile numbers in your number file are non-Chinese numbers. Follow the procedure below to send an GSMS message.
 ## Preparations
->1. A complete SMS message consists of **SMS signature** and **SMS body**. You can set different message body templates based on business needs, and then combine the signature and body to form a final display. **SMS signature + SMS body = final display**.
+>1. A complete SMS message consists of **SMS signature** and **SMS body**. You can set different message body templates based on business needs, and then combine the signature and body to form a final display. **SMS signature + SMS body = final display**.SMS signiture is not required for Global SMS, but for Mainland China SMS, SMS signiture has to be included.
 >2. Our review will be completed within half a work day after the SMS signature and template are submitted. If necessary, you can set a mobile number and email address to receive the notification of SMS message content audit for this project.
 
 ![](https://main.qcloudimg.com/raw/68eb00daf596eb4bb9d6837a6411035b.png)
@@ -8,16 +8,16 @@ The final SMS message sent to users is as follows:
 ![](https://main.qcloudimg.com/raw/cb7c93a64d0646f552c9d1cabc4e1d63.png)
 
 ### Add project
-Log in to Tencent Cloud [**SMS Console**](https://console.cloud.tencent.com/sms) and click **Add Project** to configure notification and alarm, and manage blacklist.
+Log in to Tencent Cloud [**SMS Console**](https://console.cloud.tencent.com/smsv2) and click **Add Project** to configure notification and alarm, and manage blacklist.
 ![](https://main.qcloudimg.com/raw/1ca800eeba40d444af754ed0106497e5.png)
 
 ### Create signature
-A complete SMS message consists of SMS signature and message text. Click the name of an project to enter its management page. Click **International SMS** -> **SMS Content Configuration** -> **SMS Signature** -> **Create Signature**. In **Create SMS Signature** pop-up box, enter the signature, select the signature type, enter the remarks, upload certificates, then click **Confirm** and wait for the approval. The SMS signature cannot be used until its status is changed to **Approved**.
+A complete SMS message consists of SMS signature and message text. Click the name of an project to enter its management page. Click **Global SMS** -> **SMS Content Configuration** -> **SMS Signature** -> **Create Signature**. In **Create SMS Signature** pop-up box, enter the signature, select the signature type, enter the remarks, upload certificates, then click **Confirm** and wait for the approval. The SMS signature cannot be used until its status is changed to **Approved**.
 ![](https://main.qcloudimg.com/raw/575d3dfa752b2c27a4e3d485855e9f6b.png)
 
 
 ### Create body template
-Click **International SMS** -> **SMS Content Configuration** -> **SMS Body** -> **Create Body Template**. In the **Create SMS Body Template** pop-up box, enter the template name and SMS Content, select [common message](https://intl.cloud.tencent.com/document/product/382/13444#audit-criteria-for-common-sms-messages) or [marketing message](https://intl.cloud.tencent.com/document/product/382/13444#audit-criteria-for-marketing-sms-messages) as the SMS message type, add a brief description of scenario and object of template content, then click **Confirm** and wait for the approval. The message body template cannot be used until its status is changed from **Pending approval** to **Approved**.
+Click **Global SMS** -> **SMS Content Configuration** -> **SMS Body** -> **Create Body Template**. In the **Create SMS Body Template** pop-up box, enter the template name and SMS Content, select [common message](https://intl.cloud.tencent.com/document/product/382/13444#audit-criteria-for-common-sms-messages) or [marketing message](https://intl.cloud.tencent.com/document/product/382/13444#audit-criteria-for-marketing-sms-messages) as the SMS message type, add a brief description of scenario and object of template content, then click **Confirm** and wait for the approval. The message body template cannot be used until its status is changed from **Pending approval** to **Approved**.
 
 
 >Template example:
@@ -26,7 +26,7 @@ Click **International SMS** -> **SMS Content Configuration** -> **SMS Body** -> 
 ![](https://main.qcloudimg.com/raw/3bd35055ed3079cc0defbc25088ceb2c.png)
 
 ## Sending SMS Messages
-After the SMS body template and SMS signature are approved, you can send SMS messages. Click **International SMS** -> **Send SMS Messages**.
+After the SMS body template and SMS signature are approved, you can send SMS messages. Click **Global SMS** -> **Send SMS Messages**.
 ![](
 https://main.qcloudimg.com/raw/3d76492f9d059c20dddf8ec70a8fc3c7.png)
 

@@ -6,7 +6,7 @@
 
 在创建 CVM 实例前，您需要完成以下工作：
 - [注册腾讯云账号](http://intl.cloud.tencent.com/document/product/378/9603)，并完成 [实名认证](http://intl.cloud.tencent.com/document/product/378/3629)。
-- 如果要创建网络类型为私有网络的 CVM 实例，需要在目标地域 [创建一个私有网络](https://intl.cloud.tencent.com/document/product/215/31798)，并且在私有网络下的目标可用区 [创建一个子网](https://intl.cloud.tencent.com/document/product/215/31799)。
+- 如果要创建网络类型为私有网络的 CVM 实例，需要在目标地域 [创建一个私有网络](https://intl.cloud.tencent.com/document/product/215/8113)，并且在私有网络下的目标可用区 [创建一个子网](https://intl.cloud.tencent.com/document/product/215/8114)。
 - 如果不使用系统自动创建的默认项目，需要创建一个项目。
 - 如果不使用系统自动创建的默认安全组，需要在目标地域 [创建一个安全组](http://intl.cloud.tencent.com/document/product/213/18197) 并添加能满足您业务需求的安全组规则。
 - 如果创建 Linux 实例时需要绑定 SSH 密钥对，需要在目标项目下 [创建一个 SSH 密钥](http://intl.cloud.tencent.com/document/product/213/16691)。
@@ -15,8 +15,8 @@
 ## 操作步骤
 
 1. 登录 [腾讯云官网](https://intl.cloud.tencent.com)，选择【产品】>【基础】>【计算】>【[云服务器](https://intl.cloud.tencent.com/product/cvm)】，单击【立即选购】，进入云服务器购买页面。
- - **[快速配置](https://buy.cloud.tencent.com/cvm?tab=lite)：**适合常规场景的使用，方便用户快速选购符合常规需求的云服务器实例。
- - **[自定义配置](https://buy.cloud.tencent.com/cvm?tab=custom)：**适合特定场景的使用，方便用户选购自己特定需求的云服务器实例。
+ - **[快速配置](https://buy.cloud.tencent.com/cvm?tab=lite)**: 适合常规场景的使用，方便用户快速选购符合常规需求的云服务器实例。
+ - **[自定义配置](https://buy.cloud.tencent.com/cvm?tab=custom)** ：适合特定场景的使用，方便用户选购自己特定需求的云服务器实例。
 2. 根据页面提示，配置以下信息：
 <table>
 <tr><th style="width: 20%">类别</th><th style="width: 12%">必选/可选</th><th>配置说明</th></tr>

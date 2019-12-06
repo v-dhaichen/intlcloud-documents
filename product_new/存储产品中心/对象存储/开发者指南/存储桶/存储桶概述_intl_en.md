@@ -2,7 +2,7 @@
 
 A bucket is a carrier of objects, which can be considered as a "container" for storing objects. You can manage buckets and configure attributes of buckets in various methods such as the Tencent Cloud Console, APIs, and SDKs. For example, you can set a bucket for hosting a static website or set access permission to a bucket. For more information on bucket configuration, see the topics below: 
 - [Creating a Bucket](https://intl.cloud.tencent.com/document/product/436/13309)
-- [Setting up a Static Website] (https://intl.cloud.tencent.com/document/product/436/14984)
+- [Setting up a Static Website](https://intl.cloud.tencent.com/document/product/436/14984)
 - [Setting Access Permission](https://intl.cloud.tencent.com/document/product/436/13315)
 - [Setting Hotlink Protection](https://intl.cloud.tencent.com/document/product/436/13319)
 
@@ -18,7 +18,7 @@ For example, if your business is distributed in South China, creating buckets in
 A bucket name consists of two parts: **user-defined string** and **system-generated numeric string (APPID)**, which are connected by a dash ("-"). For example, in the bucket name `examplebucket-1250000000`, examplebucket is the user-defined string, and 1250000000 is the system-generated numeric string (APPID).
 In the bucket name examples for APIs and SDKs, the naming format of a bucket is `<BucketName-APPID>`.
 
-- System-generated numeric string ([APPID](https://intl.cloud.tencent.com/document/product/436/18507#appid): automatically assigned by the system, which you do not need to specify and is unique in Tencent Cloud.
+- System-generated numeric string ([APPID](https://intl.cloud.tencent.com/document/product/436/18507#appid)): automatically assigned by the system, which you do not need to specify and is unique in Tencent Cloud.
 - User-defined string: a string of characters entered manually by you, as specified below.
 
 Naming convention for user-defined strings:
@@ -32,7 +32,7 @@ The following are examples of valid bucket names:
 - mybucket123-1250000000
 - 1-newproject-1250000000
 
-## Type of Access
+## Type of Permission
 
 Three types of bucket access permissions are available by default, i.e., "Private Read/Write", "Public Read/private Write", and "Public Read/Write". You can modify bucket access permissions in **Permission Management** of the bucket in the COS Console. For more information, see [Basic Concepts of Access Control](https://intl.cloud.tencent.com/document/product/436/30581).
 - Private Read/Write

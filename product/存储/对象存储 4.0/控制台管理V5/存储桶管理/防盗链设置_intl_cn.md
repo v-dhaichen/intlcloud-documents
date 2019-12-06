@@ -38,11 +38,10 @@ www.example.com
 ```
 www.fake.com
 ```
- 想把这张图片放入他的网站中。由于不想付流量费用，他便直接通过：
+ 站长B想把这张图片放入`www.fake.com`中。由于不想付流量费用，他便直接通过以下地址引用了pictuer.jpg并放置到`www.fake.com`网站首页 index.html 。
 ```
 example-1250000000.file.myqcloud.com/1.jpg
 ```
-地址引用了这张图片，并放置到首页 index.html 。
 
 为了避免用户 A 的损失，针对以上状况，我们提供两种开启防盗链的方式。
 #### 开启方式一
@@ -55,3 +54,6 @@ example-1250000000.file.myqcloud.com/1.jpg
 #### 开启后
 访问`http://www.example.com/index.html` 图片显示正常。
 访问 `http://www.fake.com/index.html` 图片无法显示。
+## 小程序相关说明
+1. 小程序网络请求的 referer 不允许设置，格式固定为`https://servicewechat.com/{appid}/{version}/page-frame.html`，详情请参见 [小程序开发文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)。
+2. 如需通过微信小程序访问 COS 资源，请在 COS 控制台配置防盗链白名单：servicewechat.com。

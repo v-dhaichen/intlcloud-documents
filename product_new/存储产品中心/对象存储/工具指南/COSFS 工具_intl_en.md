@@ -6,7 +6,7 @@ COSFS allows you to mount COS buckets locally and work with the objects in Tence
 - Most features of the POSIX file system, such as reading/writing files, operations on directories/links, permission management, and uid/gid management.
 - Multipart upload of large files.
 - Data verification with MD5.
-- Upload local data to COS ([COS Migration](https://cloud.tencent.com/document/product/436/15392) or [COSCMD](https://cloud.tencent.com/document/product/436/10976) is recommended).
+- Upload local data to COS ([COS Migration](https://intl.cloud.tencent.com/document/product/436/15392) or [COSCMD](https://intl.cloud.tencent.com/document/product/436/10976) is recommended).
 
 ## Limitations
 **Built on S3FS, COSFS is only suitable for simple management of mounted files, and does not support some features of a local file system. It cannot replace Cloud Block Storage (CBS) or Cloud File Storage (CFS) for the reason of performance.** Please note:
@@ -127,7 +127,7 @@ echo <BucketName-APPID>:<SecretId>:<SecretKey> > /etc/passwd-cosfs
 chmod 640 /etc/passwd-cosfs
 ```
 >Replace &lt;BucketName-APPID&gt;, &lt;SecretId&gt;, and &lt;SecretKey&gt; with the information of your bucket.
->For the bucket naming conventions, see [Bucket Naming Conventions](https://cloud.tencent.com/document/product/436/13312#.E5.91.BD.E5.90.8D.E8.A7.84.E8.8C.83). Go to [Cloud API Key Management](https://console.cloud.tencent.com/cam/capi) in the CAM Console to obtain &lt;SecretId&gt; and &lt;SecretKey&gt;. In addition, you may store the keys in the **$HOME/.passwd-cosfs** file, or specify a path for the key file using **-opasswd_file=[path]**. In this case, you need to set the permission for the key file to 600.
+>For the bucket naming conventions, see [Bucket Naming Conventions](https://intl.cloud.tencent.com/document/product/436/13312#.E5.91.BD.E5.90.8D.E8.A7.84.E8.8C.83). Go to [Cloud API Key Management](https://console.cloud.tencent.com/cam/capi) in the CAM Console to obtain &lt;SecretId&gt; and &lt;SecretKey&gt;. In addition, you may store the keys in the **$HOME/.passwd-cosfs** file, or specify a path for the key file using **-opasswd_file=[path]**. In this case, you need to set the permission for the key file to 600.
 
 **Sample:**
 
@@ -144,7 +144,7 @@ cosfs <BucketName-APPID> <MountPoint> -ourl=<CosDomainName> -odbglevel=info
 ```
 Where:
 - &lt;MountPoint&gt; is the local directory to which you want to mount the bucket (e.g. /mnt).
-- &lt;CosDomainName&gt; is the access domain name for the bucket and is in a form of `http://cos.<Region>.myqcloud.com` (applicable to XML APIs and should not contain the bucket name). &lt;Region&gt; is the region name in short, for example, ap-guangzhou and eu-frankfurt. For more information, see [Regions and Endpoints](https://cloud.tencent.com/document/product/436/6224).
+- &lt;CosDomainName&gt; is the access domain name for the bucket and is in a form of `http://cos.<Region>.myqcloud.com` (applicable to XML APIs and should not contain the bucket name). &lt;Region&gt; is the region name in short, for example, ap-guangzhou and eu-frankfurt. For more information, see [Regions and Endpoints](https://intl.cloud.tencent.com/document/product/436/6224).
 - -odbglevel specifies the log level.
 
 **Sample:**
@@ -154,14 +154,14 @@ mkdir -p /mnt/cosfs
 cosfs examplebucket-1250000000 /mnt/cosfs -ourl=http://cos.ap-guangzhou.myqcloud.com -odbglevel=info -onoxattr
 ```
 
->The mounting command for the COSFS earlier than v1.0.5 is as follows:
-```shell
-cosfs <APPID>:<BucketName> <MountPoint> -ourl=<CosDomainName>
-```
-The configuration file for the COSFS earlier than v1.0.5 is in the following format:
-```shell
-<BucketName>:<SecretId>:<SecretKey>
-```
+> The mounting command for the COSFS earlier than v1.0.5 is as follows:
+> ```shell
+> cosfs <APPID>:<BucketName> <MountPoint> -ourl=<CosDomainName>
+> ```
+> The configuration file for the COSFS earlier than v1.0.5 is in the following format:
+> ```shell
+>   <BucketName>:<SecretId>:<SecretKey>
+> ```
 
 #### 3. Unmount a bucket
 
@@ -207,4 +207,4 @@ You can obtain the uid of a user using the id command `id -u username`. For exam
 Specifies that when the available space of the disk used to store cached files is less than [size] MB, the COSFS minimizes the use of the disk space (in MB) during running. During upload and download, the COSFS caches files in the disk. When a large file is uploaded, if this parameter is not specified, the disk storing cached files will be fully occupied. If the -ouse_cache=[path] parameter is specified, the cached file is stored in the "path" directory, otherwise it is stored in the "/tmp" directory.
 
 ## FAQs
-For any questions about COSFS, see [FAQs about COSFS](https://cloud.tencent.com/document/product/436/30743).
+For any questions about COSFS, see [FAQs about COSFS](https://intl.cloud.tencent.com/document/product/436/30587).

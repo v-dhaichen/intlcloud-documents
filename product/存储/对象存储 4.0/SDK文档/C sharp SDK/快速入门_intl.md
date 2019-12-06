@@ -3,7 +3,6 @@
 ### Related resources
 - Download XML C# SDK source code of COS from: [XML C# SDK](https://github.com/tencentyun/qcloud-sdk-dotnet).
 - Download Demo from: [COS XML C# SDK Demo](https://github.com/tencentyun/qcloud-sdk-dotnet-demo).
-- Download XML C# SDK DLL files　of COS from:[COS XML DLL Library](https://github.com/tencentyun/qcloud-sdk-dotnet/tree/master/libs).
 
 ### Environment dependencies
 - The COS XML C# SDK source code is developed based on .NET 4.0 and relies on the newtonsoft.json library.
@@ -14,7 +13,7 @@
 DLL library files included in the SDK are COSXML.dll and Newtonsoft.Json.dll. You can install SDK by the following ways:
 
 - Reference DLL
-	Obtain the [SDK package](https://github.com/tencentyun/qcloud-sdk-dotnet/tree/master/libs), and import the DLL files into the project.
+	Obtain the [SDK package](https://github.com/tencentyun/qcloud-sdk-dotnet), and import the DLL files into the project.
 - Reference Project
 	 Obtain the [source code](https://github.com/tencentyun/qcloud-sdk-dotnet/tree/master/QCloudCSharpSDK), and import it as a project.
 - Reference Nuget

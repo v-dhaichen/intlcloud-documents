@@ -1,10 +1,9 @@
 ### Do SMS products support vouchers?
 Vouchers are not applicable to SMS products.
 
-### What is the billing method of China SMS and International SMS?
+### What is the billing method of Global SMS?
 
-China SMS: Prepaid billing method is used. You need to purchase an SMS package before using SMS service.
-International SMS: Postpaid billing method is used. Only users who have completed the enterprise identity verification can use International SMS service.
+Global SMS: Pay-as-you-go（billed monthly before the 3rd day of each month).     
 For more information, please see [Product Prices](https://intl.cloud.tencent.com/document/product/382/18051). For billing rules, please see [Billing](https://intl.cloud.tencent.com/document/product/382/18052).
 
 ### My account balance is sufficient, but an error 1031 (insufficient balance) is returned when I send SMS messages.

@@ -1,27 +1,27 @@
 ## Overview
 
-The COS FTP Server can be used to directly operate objects and directories in COS via the FTP protocol, including uploading/downloading/deleting files and creating folders. This tool is developed with Python, which makes the installation easier.
+The COS FTP Server can be used to directly operate objects and directories, uploading/downloading/deleting files and creating folders in COS via the FTP protocol. This tool is developed with Python, which makes the installation easier.
 
 ## Description
 
-**Upload mechanism**: The stream upload is adopted and the uploaded file is not saved locally. It works only if the working directory is configured according to the standard FTP protocol, and no disk storage space is occupied actually.
+**Upload mechanism**: adopts the stream upload and is not saving the uploaded file locally. It works only if the working directory is configured according to the standard FTP protocol, and no actual disk storage space is occupied.
 **Download mechanism**: The downloaded file is directly returned to the client in the stream download mode.
 **Directory mechanism**: Bucket serves as the root directory of the entire FTP Server, and multiple subdirectories can be created under Bucket.
 **Binding to multi-buckets**: Multiple buckets can be bound at the same time.
->?Binding to multi-buckets: Multiple buckets can be bound via different FTP Server working paths (`home_dir`). Therefore, ensure a unique `home_dir` is assigned to each bucket and user information.
+>Binding to multi-buckets: Multiple buckets can be bound via different FTP Server working paths (`home_dir`). Therefore, ensure a unique `home_dir` is assigned to each bucket and user information.
 
 **Restriction on deletion**: The `delete_enable` option can be configured for each FTP user in the new FTP Server to identify whether the FTP user is allowed to delete files.
 **Supported FTP commands:** `put`, `mput`, `get`, `rename`, `delete`, `mkdir`, `ls`, `cd`, `bye`, `quite`, and `size`.
 **Unsupported FTP commands:** `append` and `mget` (The native `mget` command is not supported, but batch download is allowed on certain Windows clients, such as the FileZilla client.)
 
->?The FTP Server tool does not support resuming upload from breakpoint.
+>The FTP Server tool does not support resuming upload from breakpoint.
 
 ## Getting Started
 
 ### System Environment
 
-- OS: Linux. It is recommended to use the [CVM](https://cloud.tencent.com/document/product/213) of Tencent CentOS series. Windows systems are not supported for now.
-- Python interpreter version: Python 2.7. For more information on the installation and configuration, see [Installing and Configuring Python](https://cloud.tencent.com/document/product/436/10866).
+- OS: Linux. It is recommended to use the [CVM](https://intl.cloud.tencent.com/document/product/213) of Tencent CentOS series. Windows systems are not supported for now.
+- Python interpreter version: Python 2.7. For more information on the installation and configuration, see [Installing and Configuring Python](https://intl.cloud.tencent.com/document/product/436/10866).
 - Dependency package:
  - cos-python-sdk-v5 (≥1.6.5)
  - pyftpdlib (≥1.5.2)
@@ -44,7 +44,7 @@ python setup.py install   # Your account sudo or root permission may be required
 ```bash
 python ftp_server.py
 ```
-FTP Server can also be started in the following two ways:
+FTP Server can also be started in the two following ways:
  - Execute the `nohup` command to start it in the backend process:
 ```bash
 nohup python ftp_server.py >> /dev/null 2>&1 &
@@ -104,10 +104,10 @@ delete_enable=false
 masquerade_address = XXX.XXX.XXX.XXX        # If FTP SERVER is located behind a gateway or NAT, you can assign the gateway's IP address or domain name to the FTP through this configuration item.
 listen_port = 2121					   # Ftp Server's listening port (default: 2121). Note that the firewall needs this port opened.
 
-passive_port = 60000,65535             # passive_port can be used to set the port range for the passive mode. Default is (60000, 65535).
+passive_port = 60000,65535             # passive_port can be used to set the port range for the passive mode. The default range is (60000, 65535).
 
 [FILE_OPTION]
-# By default, the maximum size of a single file is 200G. Too large files are not recommended.
+# By default, the maximum size of a single file is 200G. We do not recommend going beyond the limit. 
 single_file_max_size = 21474836480
 
 [OPTIONAL]
@@ -121,15 +121,18 @@ log_dir             = log                  # Set the directory to store logs. De
 ```
 
 
->?
+>
 >- To bind each user to a unique bucket, add the section of `[COS_ACCOUNT_X]`.
-The section for each `COS_ACCOUNT_X` is described as follows:
- - The username (`ftp_login_user_name`) and the home directory (`home_dir`) under each account must be unique, and the home directory must be a directory that exists in the system.
- - The number of users logging in to each COS FTP Server simultaneously cannot exceed 100.
- - `endpoint` and `region` will not take effect at the same time. To use the public cloud COS service, enter the `region` field correctly. The `endpoint` is commonly used in the privatized deployment environment. When both 'region` and `endpoint` are entered, `endpoint` will take precedence.
+>  The section for each `COS_ACCOUNT_X` is described as follows:
+>
+>  - The username (`ftp_login_user_name`) and the home directory (`home_dir`) under each account must be unique, and the home directory must be a directory that exists in the system.
+>
+>  - The number of users logging in to each COS FTP Server simultaneously cannot exceed 100.
+>
+>  - `endpoint` and `region` will not take effect at the same time. To use the public cloud COS service, enter the `region` field correctly. The `endpoint` is commonly used in the privatized deployment environment. When both 'region` and `endpoint` are entered, `endpoint` will take precedence.
+>
 >- The OPTIONAL part in the configuration file is used to adjust the upload performance for advanced users. You can obtain an optimal uploading speed by reasonably adjusting the part size and the number of concurrent upload threads based on the server performance. General users can keep the default settings without adjustment.
-Meanwhile, the limit option for the maximum number of connections is provided. If you do not want to set a limit to it, enter 0, meaning no limit to the maximum number of connections (a reasonable evaluation is required based on your server performance).
-
+>Meanwhile, the limit option for the maximum number of connections is provided. If you do not want to set a limit to it, enter 0, meaning no limit to the maximum number of connections (a reasonable evaluation is required based on your server performance).
 
 ## FAQs
-If any error occurs or you have any question on the upload limit while using FTP Server, see [FTP Server Tool FAQs](https://cloud.tencent.com/document/product/436/30742).
+If any error occurs or you have any question on the upload limit while using FTP Server, see [FTP Server Tool FAQs](https://intl.cloud.tencent.com/document/product/436/30588).

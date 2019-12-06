@@ -4,7 +4,7 @@ You need to sign up for a Tencent Cloud account if you don't have one. For more 
 If you already have a Tencent Cloud account, go to the next step.
 
 ### Log in to the Tencent Cloud SMS Console
-Log in to the Tencent Cloud **[SMS Console](https://console.cloud.tencent.com/sms)**. You need to apply for the activation of SMS upon the first login.
+Log in to the Tencent Cloud **[SMS Console](https://console.cloud.tencent.com/smsv2)**. You need to apply for the activation of SMS upon the first login.
 ![](https://main.qcloudimg.com/raw/4208ecfb62d65be1dc42a17f5976f1f6.png)
 ### Apply for activation of GSMS
 If your account has not gone through identity verification, go to [Account Center](https://console.cloud.tencent.com/developer) for identity verification. For more information, please see [here](https://intl.cloud.tencent.com/document/product/378/3629).
@@ -15,7 +15,7 @@ If you have completed identity verification, click **Start connection**.
 
 ## Preparations
 >1. A complete SMS message consists of **SMS signature** and **SMS body**. You can set different message body templates based on business needs, and then combine the signature and body to form a final display. **SMS signature + SMS body = final display**.
->2. Our review will be completed within half a work day after the SMS signature and template are submitted. If necessary, you can set a mobile number and email address to receive the notification of SMS message content audit for this project.
+>2. Our review will be completed within half a work day after the SMS signature and template are submitted. If necessary, you can set a mobile number and email address to receive the notification of SMS message content audit for this project. SMS signiture is not required for Global SMS, but for Mainland China SMS, SMS signiture has to be included.
 
 ![](https://main.qcloudimg.com/raw/7a2f506fb2b2a6773ec9c9223208b9ce.png)
 The final SMS message sent to users is as follows:
