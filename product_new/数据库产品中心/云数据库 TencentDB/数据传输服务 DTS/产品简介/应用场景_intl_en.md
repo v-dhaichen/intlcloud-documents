@@ -12,7 +12,7 @@ DTS supports data sync between your local IDC as business center and Tencent Clo
 ![][img3]
 
 ## Data Archiving and Storage
-The data subscription feature of DTS can help you push incrementally updated data in your TencentDB instance to an archival database or data warehouse in real time through data streams.
+The data subscription feature of DTS can help you push incrementally updated data in your TencentDB instance to an archive database or data warehouse in real time through data streams.
 ![][img4]
 
 

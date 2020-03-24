@@ -6,6 +6,7 @@ CDNコンソールでドメイン名を追加することで、Tencent Cloud に
 ![](https://main.qcloudimg.com/raw/3cee079d180314cfaef452b836e0f565.jpg)
 ドメイン名の追加ページに入ります。ここでドメイン名関連の構成を完了できます。構成については、下表[ドメイン名の構成](#m1)を参照してください。 
 ![](https://main.qcloudimg.com/raw/48e8c71e7b7e84b5fdd13ffc1b30ded2.jpg)
+
 <span ID ="m1"> </a>
 ## ドメイン名の構成
 
@@ -67,6 +68,7 @@ CDNコンソールでドメイン名を追加することで、Tencent Cloud に
 
 加速サービスのタイプと基本構成をを選択します。
 ![](https://main.qcloudimg.com/raw/2f0b3ff1c1c8fa1313b96d856fb3b1fd.jpg)
+
 1. **サービスタイプ** 
    サービスタイプの選定は、ドメイン名がスケジューリングするリソースプラットフォームを決めています。異なるリソースプラットフォームの加速の構成も異なりますので、お客様のサービスに適したサービスタイプを選択してください。
 	- 静的加速：Eコマース、ウェブサイト、ゲーム画像など静的リソースの加速に適しています。
@@ -82,4 +84,4 @@ CDNコンソールでドメイン名を追加することで、Tencent Cloud に
 【サブミット】をクリックし、ドメイン名を追加します。ドメイン名の構成をネットワーク全体のノードにデリバーするには約5～10分かかるため、しばらくお待ちください。
 ![](https://main.qcloudimg.com/raw/0bf658a80d21a62e6bc30a54cbc21ff8.jpg)
 
->アクセスが完了後、Tencent Cloud CDNは対応するCNAMEアドレスをアサインします。CDNサービスを有効にするには、まずCNAMEを構成する必要があります。詳細については、[CNAME構成](https://intl.cloud.tencent.com/document/product/228/3121)を参照してください。
+>!アクセスが完了後、Tencent Cloud CDNは対応するCNAMEアドレスをアサインします。CDNサービスを有効にするには、まずCNAMEを構成する必要があります。詳細については、[CNAME構成](https://intl.cloud.tencent.com/document/product/228/3121)を参照してください。

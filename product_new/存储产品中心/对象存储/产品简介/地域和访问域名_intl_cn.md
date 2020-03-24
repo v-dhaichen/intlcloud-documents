@@ -6,8 +6,9 @@
 **默认域名**指 COS 的默认存储桶域名，用户在创建存储桶时，由系统根据存储桶名称和地域自动生成。不同地域的存储桶有不同的默认域名。
 
 
-> ?
+> 
 > - 创建存储桶后会生成对应的默认域名，您可以前往 [对象存储控制台](https://console.cloud.tencent.com/cos5)，在存储桶的【基础配置】中查看。
+
 > - 金融云地域与公有云地域之间网络不互通。
 
 ### 中国大陆地域
@@ -19,8 +20,8 @@
       <th>默认域名（上传/下载/管理 ）</th>
    </tr>
    <tr>
-      <td rowspan=9>中国大陆</td>
-      <td rowspan=6 nowrap="nowrap">公有云地域</td>
+      <td rowspan=10>中国大陆</td>
+      <td rowspan=7 nowrap="nowrap">公有云地域</td>
       <td nowrap="nowrap">北京一区（已售罄）</td>
       <td>ap-beijing-1</td>
       <td>&lt;BucketName-APPID&gt;.cos.ap-beijing-1.myqcloud.com</td>
@@ -29,6 +30,11 @@
       <td>北京</td>
       <td>ap-beijing</td>
       <td>&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com</td>
+   </tr>
+   <tr>
+      <td>南京</td>
+      <td>ap-nanjing</td>
+      <td>&lt;BucketName-APPID&gt;.cos.ap-nanjing.myqcloud.com</td>
    </tr>
    <tr>
       <td>上海（华东）</td>
@@ -158,5 +164,4 @@ examplebucket-1250000000.cos.ap-guangzhou.myqcloud.com
 
 如果您在腾讯云内部署了服务用于访问 COS，则同地域范围内访问将会自动被指向到内网地址。跨地域暂不支持内网访问，默认将会解析到外网地址。
 
-有关内网与外网访问的相关信息，详情请参见 [创建请求概述](https://intl.cloud.tencent.com/document/product/436/30613) 文档。
-
+有关内网与外网访问的相关信息，详情请参见 [创建请求概述](https://cloud.tencent.com/document/product/436/31315) 文档。

@@ -19,7 +19,7 @@ If the networks of a CVM instance and a TencentDB for MySQL instance are of diff
 >- The CVM instance will be restarted during migration. Do not perform other operations on it.
 >- Check the instance status after migration and verify whether private network access and remote login work properly.
 - The switch from basic network to VPC is irreversible. After the switch to a VPC, the CVM instance cannot communicate with Tencent Cloud services in basic network.
-- Solution 2: [Use Classiclink](https://intl.cloud.tencent.com/document/product/215/20083).
+- Solution 2: Use Classiclink.
 - Solution 3: Connect the CVM instance to the public network address of the TencentDB for MySQL instance. This solution has poor performance, security, and stability, and you are recommended to use VPC.
 
 
@@ -27,7 +27,7 @@ If the networks of a CVM instance and a TencentDB for MySQL instance are of diff
  By default, the CVM and TencentDB for MySQL instances can interconnect over the private network only if they are in the same VPC. If they are in different VPCs, interconnection over the private network can be achieved in the following ways:
 - Solution 1 (**recommended**): Migrate the TencentDB for MySQL instance to the VPC where the CVM instance resides.
 For more information on directions, see [Network Switch](https://intl.cloud.tencent.com/document/product/236/31915) for TencentDB for MySQL.
--  Solution 2: Create a [peering connection](https://intl.cloud.tencent.com/document/product/553) between the two VPCs.
+-  Solution 2: Create a peering connection between the two VPCs.
 Otherwise, the instances can only interconnect over the public network, which has poor performance, security, and stability.
 
 ### Incorrect Security Group Configuration

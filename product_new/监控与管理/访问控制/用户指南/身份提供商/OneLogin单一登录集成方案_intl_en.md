@@ -12,7 +12,7 @@ This tutorial describes how to configure OneLogin single sign-on for Tencent Clo
 2. In the search box, enter **SAML** and press **Enter**. In the results list, click **Pilot Catastrophe SAML (IdP)**. This is shown in the following figure:
 ![](https://main.qcloudimg.com/raw/2f80d98e0a6f05a589bd6a87323e56f7.png)
 3. In **Display Name** field, enter the application name and click **Save** to complete the application creation. This is shown in the following figure:
- ![](https://main.qcloudimg.com/raw/d600fb5d578a92f9a2bf5cba1605af46.png)
+ ![](https://main.qcloudimg.com/raw/efced05d75ad9843faca45ad5dca7fee.png)
 
 <span id="cam"></span>
 ### Configuring CAM
@@ -22,7 +22,7 @@ This tutorial describes how to configure OneLogin single sign-on for Tencent Clo
 
 1. In the [OneLogin Application Management page](https://xiaoyu.onelogin.com/apps), select the application **test** that you created.
 2. Click **More Actions**. Select **SAML Metadata**, and download the IDP cloud data documentation. This is shown in the following figure.
-![](https://main.qcloudimg.com/raw/a1c304fad4d9b7a898beceae9bf977f6.png)
+![](https://main.qcloudimg.com/raw/56eb0b91f2dcf493478f1ae0e9d9c828.png)
 3. Create the Tencent Cloud CAM identity provider and roles. For more information, see [Creating an IdP](https://intl.cloud.tencent.com/document/product/598/30391).
 
 ### Configuring OneLogin Single Sign-On

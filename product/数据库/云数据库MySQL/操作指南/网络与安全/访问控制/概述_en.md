@@ -4,11 +4,11 @@ If you use multiple Tencent Cloud services, such as CDB (Cloud DataBase), CVM, V
 - You cannot limit the access permission of other users, which is easy to pose a security risk due to misoperations.
 
 Now, Cloud Access Management comes to solve the issues above.
-Cloud Access Management (CAM) is a service package provided by Tencent Cloud, and is used to help customers manage the permissions to access resources under Tencent Cloud accounts in a secure way. By using CAM, you can create, manage and terminate users (or user groups), as well as determine which Tencent Cloud resources can be accessed and who can use them through identity management and policy management. For more information on CAM, please see [CAM Overview](https://cloud.tencent.com/document/product/598/10583).
+Cloud Access Management (CAM) is a service package provided by Tencent Cloud, and is used to help customers manage the permissions to access resources under Tencent Cloud accounts in a secure way. By using CAM, you can create, manage and terminate users (or user groups), as well as determine which Tencent Cloud resources can be accessed and who can use them through identity management and policy management. For more information on CAM, please see [CAM Overview](https://intl.cloud.tencent.com/document/product/598/10583).
 
 With CAM, you can use sub-accounts to allow different users to manage different services to avoid the problems above. Sub-accounts have no permissions to use CDB instances or CDB-related resources by default. Therefore, it is necessary to create policies to allow sub-accounts to use the needed resources or permissions.
 
-A policy is a syntax rule used to define and describe one or more permissions. It allows or forbids one user or a group of users to use specific resources through authorization. For more information on CAM policy, please see [Policy Syntax](https://cloud.tencent.com/document/product/378/8962). For more information on how to use CAM policy, please see [Policy](https://cloud.tencent.com/document/product/378/8955).
+A policy is a syntax rule used to define and describe one or more permissions. It allows or forbids one user or a group of users to use specific resources through authorization. For more information on CAM policy, please see [Policy Syntax](https://intl.cloud.tencent.com/document/product/598/10603). For more information on how to use CAM policy, please see [Policy](https://intl.cloud.tencent.com/document/product/598/10601).
 
 If you do not need to manage the permission of sub-accounts to access CDB resources, you can skip this chapter. This will not affect your understanding and usage of other parts in this document.
 

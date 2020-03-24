@@ -13,7 +13,7 @@ MPS has an ultra-large distributed transcoding cluster that supports multipart t
 MPS provides a comprehensive set of APIs and intuitive documentation for easy and quick integration. You can set triggers for automatic video processing upon file uploads, eliminating the need for manual API calls.
 
 ## Media Workflows
-MPS supports media workflow customization which streamlines media files processing. You can do transcoding, screencapturing, watermarking, and generate animated images all in one stop. Moreover, it boasts an event callback mechanism that keeps you updated on task execution statuses.
+MPS supports media workflow customization which streamlines media files processing. Transcoding, screencapturing, watermarking, and animated images generation can all be done on one platform. Moreover, it boasts an event callback mechanism that keeps you updated on task execution statuses.
 
 ## Cost Efficiency
 MPS is billed daily or monthly on a pay-as-you-go basis with no minimum fees, so you only need to pay for what you use. There is no need for upfront payments or maintenance fees, thus greatly reducing your usage costs.

@@ -1,7 +1,7 @@
 ## Scenario
-This document instructs you on how to configure a multi-user remote login Windows CVM, taking a CVM with Windows Server 2012 R2 as the operating system as an example.
+This document shows you how to configure a multi-user remote login to Windows CVM, taking a CVM with Windows Server 2012 R2 as the operating system as an example.
 
-## Directions
+## Steps
 ### Adding remote desktop service
 1. Log in to the Windows CVM.
 2. In the operating system interface, click <img src="https://main.qcloudimg.com/raw/f779581f1ce3edfead8c725ce1504009.png" style="margin: 0;"></img> to open **Server Manager**, as shown below:
@@ -22,22 +22,22 @@ The “Add features that required for Remote Desktop Licensing?” prompt box wi
 10. In the “Add features that required for Remote Desktop Licensing?” prompt box, click **Add Features**.
 ![](https://main.qcloudimg.com/raw/d7aa066366b168ac8a7475155d34ea19.png)
 11. Click **Next**.
-12. Check **Restart the destination server If required**, and click **Yes** in the prompt box that pops up, as shown below:
-![](https://main.qcloudimg.com/raw/df280b0a66470be404f114bd17c47d21.png)
+12. Check **Restart the destination server automatically if required**, and click **Yes** in the pop-up prompt box, as shown below:
+![](https://main.qcloudimg.com/raw/05a63b7593c57573a5c19b03ae4cd4a5.png)
 13. Click **Install** and wait for the remote desktop service installation to complete.
 
-### Configuring for multi-user remote login to instance
+### Configuring multi-user remote login to instance
 1. Use VNC to log in to Windows CVM.
 2. In the operating system interface, click <img src="https://main.qcloudimg.com/raw/f0c84862ef30956c201c3e7c85a26eec.png" style="margin: 0;"></img> to open the Windows PowerShell window.
 3. In the Windows PowerShell window, enter **gpedit.msc** and press **Enter** to open the **Local Group Policy Editor**.
-4. In the left navigation tree, select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Connection**, and double click **Limit number of connections**, as shown below:
+4. In the left navigation tree, select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Connections**, and double click **Limit number of connections**, as shown below:
 ![](https://main.qcloudimg.com/raw/e0420d2bb8ddd3e1524ee688173cb9d1.png)
-5. In the **Limit number of connections** window that pops up, select **Enabled**, and enter the maximum number of simultaneous remote users in **Maximum number of RD connections allowed**, as shown below:
+5. In the **Limit number of connections** window that pops up, select **Enabled**, and enter the maximum number of simultaneous remote users in **RD Maximum Connections allowed**, as shown below:
 ![](https://main.qcloudimg.com/raw/066c9dfb06dc4c092424c4e1142f7471.png)
 6. Click **OK**.
-4. In the left navigation tree, select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Connection**, and double click **Limit remote desktop service users to separate remote desktop service session**, as shown below:
+4. In the left navigation tree, select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Connections**, and double click **Restrict Remote Desktop Services users to a single Remote Desktop Services session**, as shown below:
 ![](https://main.qcloudimg.com/raw/1183e9f4c6c08b6f99746db42b0d183e.png)
-8. In the “Limit remote desktop service users to separate remote desktop service session” window that pops up, select **Disabled**, and click **OK**, as shown below:
+8. In the “Restrict Remote Desktop Services users to a single Remote Desktop Services session” window that pops up, select **Disabled**, and click **OK**, as shown below:
 ![](https://main.qcloudimg.com/raw/56d910ea359024d34dc05de3a274c91a.png)
 9. Close local group policy editor.
 10. Restart the instance.

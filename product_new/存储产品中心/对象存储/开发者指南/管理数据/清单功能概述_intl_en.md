@@ -8,7 +8,7 @@ You can use the inventory feature for various purposes, including but not limite
 - Streamline and speed up service workflows and big data jobs.
 
 >- You can configure multiple inventory tasks for one bucket. COS doesn’t directly read the content of an object, but only scan the attribute information such as metadata of the object.
->- Currently, the inventory feature is not available for COS buckets in financial cloud regions.
+>- Currently, the inventory feature is not available for COS buckets in financial cloud regions and outside China regions.
 
 ## Inventory Parameters
 
@@ -77,7 +77,7 @@ To learn how to configure the inventory via APIs, see the following API Document
 - [PUT Bucket inventory](https://intl.cloud.tencent.com/document/product/436/30625) 
 - [GET Bucket inventory](https://intl.cloud.tencent.com/document/product/436/30623) 
 - [DELETE Bucket inventory](https://intl.cloud.tencent.com/document/product/436/30626) 
-- [List Bucket Inventory Configurations](https://intl.cloud.tencent.com/document/product/436/30627) 
+- List Bucket Inventory Configurations
 
 ## Storage Path for the Inventory Report
 

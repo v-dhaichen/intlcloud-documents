@@ -17,7 +17,7 @@
 >- 迁移过程中，实例需要进行重启，请勿进行其他操作。
 >- 迁移后，请注意检查实例运行状态，内网访问以及远程登录是否正常。
 >- 基础网络切换 VPC 网络后不可逆，CVM 切换至 VPC 网络后与其他基础网络的云服务不互通。
-- 解决办法二：[使用基础网络互通](https://intl.cloud.tencent.com/document/product/215/20083)。
+- 解决办法二：使用基础网络互通。
 - 解决办法三：CVM 实例使用 MySQL 实例的外网连接地址连接 MySQL 实例。这种方式的性能、安全性、稳定性较差，建议您使用 VPC 网络。
 
 
@@ -25,7 +25,7 @@
  默认情况下，CVM 实例与 MySQL 实例的网络类型都为 VPC 网络且两者都位于同一 VPC 网络时，才能直接通过内网互通。如果位于不同 VPC，可以采取以下方法使 CVM 和 MySQL 进行互通。
 - 解决办法一（**推荐**）：将 MySQL 实例迁移到 CVM 实例所在的 VPC 网络。
 具体操作：参考 MySQL 的 [切换网络](https://intl.cloud.tencent.com/document/product/236/31915)，将 MySQL 实例的 VPC 网络切换成 CVM 实例所在的 VPC 网络。
--  解决办法二：在两个 VPC 网络之间建立 [对接连接](https://intl.cloud.tencent.com/document/product/553)。
+-  解决办法二：在两个 VPC 网络之间建立对等连接。
 若不采取以上办法，则位于不同 VPC 网络的 CVM 和 MySQL 只能通过公网互通。这种方式的性能、安全性、稳定性较差。
 
 ### 安全组配置有误
